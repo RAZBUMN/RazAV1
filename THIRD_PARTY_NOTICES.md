@@ -19,7 +19,8 @@ stays under its own licence, and the credit for it goes to its authors.
 | **Visual Studio Build Tools, CMake, NASM** | compiling the encoders (installed with winget, only if missing) | Microsoft; Kitware; the NASM team | Microsoft licence terms (accepted during install); BSD 3-Clause; BSD 2-Clause |
 | **curl, tar** | downloading and unpacking | built into Windows 10 1803 and newer | curl licence; BSD |
 
-Grain tables (`.tbl`) are not included. You add your own to the `tables` folder.
+No grain tables (`.tbl`) are shipped: RazAV1 makes the ones it needs itself (see Film grain tables below).
+You can still add your own to the `tables` folder.
 
 ## If you share a ready-made folder
 
