@@ -37,9 +37,50 @@ The first public version of RazAV1 (developed privately as "AV1 Master Encoder")
 - Settings > Defaults for audio, crop and output across all profiles.
 - Update check and one-click **Update now**, Copy diagnostics, language files for translations.
 
-## Before 1.0 (private versions)
+## Before 1.0 (private versions, as "AV1 Master Encoder")
 
-- v7: KNLMeansCL calibration, VMAF scores for the probes, engine output inside the window, grain plan editor.
-- v6: portable folder with automatic setup (ffmpeg, VapourSynth, SVT-AV1 compiled locally).
-- v5: the window, profiles, KNLMeansCL on the GPU.
-- v4.x: batch engine with adaptive grain plans, scene-cut probes, preview reel, audio in parallel.
+**v7** - KNLMeansCL calibrated per film against the hqdn3d levels, VMAF scores for the probes, engine
+output, live size/time/speed and abort inside the window, grain plan editor.
+
+**v6** - Portable folder with automatic setup: ffmpeg, VapourSynth and SVT-AV1 compiled locally.
+
+**v5** - The window, profiles, KNLMeansCL denoising on the GPU.
+
+**v4.3** - From one file to a queue.
+- Drop several files or whole folders; each gets its own crop, plan and audio pick, with no
+  questions in between. "Send To" menu entry.
+- Presets file and last settings, a start screen and a ready screen that carry on by themselves.
+- Source detection (SDR, HDR10, HLG, Dolby Vision) with a suggested workflow, and warnings when the
+  chosen workflow doesn't fit the file.
+- New workflows: 4K SDR kept at 4K, and 4K HDR10/HLG passthrough with the mastering display and
+  light levels kept. HDR grain tables.
+- Audio track picked automatically (preferred language, no commentary, most channels).
+- Resume after a crash: a finished video stream is reused, only audio and mux are redone.
+- Smart probe placement: no intro or end credits, probes start on scene cuts, every denoise level
+  covered. Encode time estimate next to the size estimate.
+- A log file per encode, optional subtitles and fonts (with a retry without them if the mux fails).
+- CPU mode (max, normal, low), sleep or shutdown when the queue is done, a notification at the end.
+
+**v4.2** - Adaptive mode: the film is split into scenes, each gets a denoise level (1-5) and a grain
+tier, applied with timed hqdn3d commands and a timed grain table. The plan can be reused or edited
+in Notepad, and the probes use the settings of the scene they land in.
+
+**v4.1** - Analysis pass that measures brightness and scene cuts across the film (report only), the
+groundwork for the adaptive mode.
+
+**v4.0** - ISO 200 grain table. The audio's real channel layout is read: 7.1 and 6.1 become 5.1,
+5.0, stereo and mono keep their shape, with the downmix before loudness normalisation and a channel
+check after the encode. Audio progress in percent. Grain tables picked by the output size.
+
+**v3.4.2** - Crop scan over the whole film (40 short clips per hour) that keeps every aspect ratio,
+so mixed-ratio films keep their full picture.
+
+**v3.4.1** - Checks before starting (encoder, ffmpeg, the tonemap filter), audio track choice, crop
+detection, the source frame rate kept, a denoise strength per grain profile, audio encoded in
+parallel with the video, a confirmation after the preview, the real size and time at the end, and
+the temporary streams kept when something fails.
+
+**v2.5.4** - The first version: a script to drop a film on. Five workflows (1080p film, TV episode,
+4K to 1080p, 4K HDR/Dolby Vision to 1080p SDR with tonemapping, anime), hqdn3d denoising, ISO 400
+and ISO 800 grain tables, CRF 30 or 26, SVT-AV1 preset 5, six probes per hour with a size estimate
+and a playable preview reel, Opus 5.1 audio with loudness normalisation.
