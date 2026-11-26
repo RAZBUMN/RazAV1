@@ -3499,10 +3499,13 @@ function Build-Svt([string]$id = 'mainline', [bool]$officialBin = $false) {
     $env:AV1_VSPATH = $t.VsPath
     # Clang only matters for Visual Studio 2022 17.8 and newer [their MSVC miscompiles the AVX-512 code].
     # Visual Studio 2019 builds SVT-AV1 correctly with its own compiler.
+    # Clang on Windows cannot compile SVT-AV1's AVX-512 code [4.3 and newer], so it is built without it:
+    # AVX2 is used instead, the same path as on CPUs without AVX-512.
     $env:AV1_TOOLSET = ''
+    $env:AV1_CMAKE_EXTRA = ''
     if ($officialBin) { }
     elseif ($t.VsMajor -ge 17) {
-        if ($t.Clang) { $env:AV1_TOOLSET = ' -T ClangCL'; Setup-Log ('Compiler: Clang [Visual Studio ' + $t.VsMajor + ']') }
+        if ($t.Clang) { $env:AV1_TOOLSET = ' -T ClangCL'; $env:AV1_CMAKE_EXTRA = '-DENABLE_AVX512=OFF'; Setup-Log ('Compiler: Clang [Visual Studio ' + $t.VsMajor + ', AVX-512 code off, AVX2 used]') }
         else { Setup-Log ('Compiler: MSVC [Visual Studio ' + $t.VsMajor + ', Clang is not installed; AVX-512 code paths may be slower or unsafe on some CPUs]') }
     }
     else { Setup-Log ('Compiler: MSVC from Visual Studio ' + $t.VsMajor + ' [not affected by the AVX-512 bug, Clang not needed]') }
