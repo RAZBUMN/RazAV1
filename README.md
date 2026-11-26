@@ -1,19 +1,46 @@
 # RazAV1
 
-A Windows app for encoding films to AV1 with SVT-AV1, built for one job: turning grainy Blu-ray
-films into small AV1 files that still look like film.
+**A specialised Windows tool for one job: shrinking 1080p Blu-ray remuxes to AV1 as far as possible
+while they still look like film.** On most titles the result is around **90% smaller** than the
+remux, with good quality scores, in a reasonable time on a strong home PC.
+
+> **Personal project, shared as-is.** I built RazAV1 for my own film collection. I fix bugs when I
+> have time, but there is no support promised and no schedule. It is not a general video converter:
+> it is tuned for 1080p film sources first. 4K works, but it is slow on the CPU encoder.
+
+<!-- Screenshot: the Files page with a film in the queue -->
+
+## What it is tuned on
+
+Every default, speed number and size estimate in this project comes from this PC:
+
+| Part | |
+|---|---|
+| CPU | Intel Core i9-12900F |
+| GPU | AMD Radeon RX 7900 XT (KNLMeansCL denoising on the GPU) |
+| RAM | 64 GB DDR4 3600 MT/s CL18 |
+| Storage | Samsung 980 NVMe SSD (PCIe 3.0) |
+| OS | Windows 11 |
+
+For example, Casino Royale (1080p remux) came out at 3.49 GB in about 50 minutes, with the
+preview's size estimate within 2% of the result. A laptop or a PC without a strong GPU will be much
+slower: use the **RAZ Triangle Classic** profile there (CPU denoising).
+
+## How it works, in short
 
 Use it as a plain AV1 encoder with the encoders' own defaults, or with the tuned **RAZ Triangle**
 pipeline: crop scan, GPU denoising chosen scene by scene, generated film-grain tables, and a preview
 with a size estimate and quality scores before you commit to the full encode.
 
-> **Status:** 1.0 is feature complete. Updates from here are bug fixes.
-> RazAV1 is a specialised tool for films and series, not a general video converter.
-
-<!-- Screenshot: the Files page with a film in the queue -->
-
 Windows 10 1803 or newer, 64-bit. Nothing to install by hand: the app downloads and builds
 everything it needs into its own folder.
+
+## Made with AI
+
+About 90% of RazAV1's code was written by AI: **Claude** (Anthropic) for most of the project, and a
+version of **Google Gemini** at the very start. The ideas, the tuning, the testing on real films and
+every decision about what the tool should do are mine. Every release was tested on real films
+before it went out.
 
 ## Your first encode
 
