@@ -144,7 +144,8 @@ backed up in `_update_backup`.
 
 ## Translating
 
-The window's texts are in `lang\en.txt`. Copy it to, for example, `lang\ro.txt`, translate the text
+The window comes in English, Romanian, Spanish, French, German, Portuguese (Brazil) and Russian.
+The translations were made with AI, so corrections are welcome. The window's texts are in `lang\en.txt`. Copy it to, for example, `lang\ro.txt`, translate the text
 after each `=`, and choose the language in **Settings > Appearance > Language**. Lines you leave out
 stay English. `lang\README.txt` explains the details. Translations are welcome as pull requests.
 

@@ -12,6 +12,8 @@
 - Fixed: Copy diagnostics failed with an error.
 - RAZ Triangle uses fixed KNLMeansCL strengths per denoise level by default [measuring on each film
   is still a switch].
+- Translations of the window: Romanian, Spanish, French, German, Portuguese (Brazil) and Russian
+  [AI-translated, corrections welcome]. Pick one in Settings > Appearance > Language.
 - Keyboard: Delete removes the selected files, Alt+Up/Down moves them, Ctrl+O / Ctrl+Shift+O add
   files or a folder, Ctrl+1 / Ctrl+2 switch between the Files and Encoding pages.
 
