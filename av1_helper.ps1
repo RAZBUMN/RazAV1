@@ -5281,7 +5281,7 @@ function Add-Paths([string[]]$paths) {
 # ---------------------------------------------------------------------------------------------
 # v1.0 stage 4: simple view, results, history, queue memory, diagnostics, About, app updates
 # ---------------------------------------------------------------------------------------------
-$AppVersion = '1.0.0'
+$AppVersion = '1.0.1'
 # The GitHub repository of this app, as owner/name [for example RAZBUMN/RazAV1].
 # When set, the window checks it once a day for a newer release.
 $AppRepo = 'RAZBUMN/RazAV1'

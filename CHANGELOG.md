@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.1
+
+- Fixed: 4K HDR10/HLG passthrough failed on every probe with SVT-AV1 4.3 [the encoder refused an
+  option it no longer has], and the failure was counted as a success, so the size and time estimates
+  were wrong. `--enable-hdr` is now only passed when the encoder still supports it.
+- A probe that produces no video now counts as failed and shows the encoder's own error message.
+  When every probe fails, the full encode does not start.
+- Fixed: SVT-AV1 4.3 could not be compiled with Visual Studio 2022 [Clang]; it is now built without
+  its AVX-512 code there [AVX2 is used, quality is the same].
+- Fixed: Copy diagnostics failed with an error.
+- RAZ Triangle uses fixed KNLMeansCL strengths per denoise level by default [measuring on each film
+  is still a switch].
+- Keyboard: Delete removes the selected files, Alt+Up/Down moves them, Ctrl+O / Ctrl+Shift+O add
+  files or a folder, Ctrl+1 / Ctrl+2 switch between the Files and Encoding pages.
+
 ## 1.0.0 (first public release)
 
 The first public version of RazAV1 (developed privately as "AV1 Master Encoder").

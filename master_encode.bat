@@ -11,7 +11,7 @@ REM Drop files or folders on this script for the console menus, or use "RazAV1.c
 REM bin, tables and vs folders next to this script are used first [portable pack].
 REM v7: KNLMeansCL calibrates itself against the hqdn3d levels, probes get a quality score, the window shows this output.
 
-set "VER=v1.0.0"
+set "VER=v1.0.1"
 set "SELF=%~f0"
 set "HERE=%~dp0"
 set "HELPER=%~dp0av1_helper.ps1"

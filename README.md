@@ -17,7 +17,7 @@ everything it needs into its own folder.
 
 ## Your first encode
 
-1. Download `RazAV1_1.0.0.zip` from [Releases](../../releases) and unpack it anywhere
+1. Download the latest `RazAV1_<version>.zip` from [Releases](../../releases) and unpack it anywhere
    (a folder of its own, not Program Files).
 2. Open **RazAV1.cmd**. On the first start, choose **Tuned [RAZ Triangle]** or **Plain AV1**.
 3. Press **Setup and updates > Set up everything**. This downloads ffmpeg and VapourSynth, installs
@@ -106,6 +106,8 @@ no grain table is chosen), which is how the stock profiles can use it.
 - History of every encode with the space saved, free-space check, Copy diagnostics for bug reports.
 - Graphite dark theme, a UI size that follows the window, update check and one-click updates.
 - Language files for translations (see below).
+- Keyboard: Delete removes files from the queue, Alt+Up/Down reorders them, Ctrl+O adds files,
+  Ctrl+1 / Ctrl+2 switch pages.
 
 ## Updates
 
