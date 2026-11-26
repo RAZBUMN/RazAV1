@@ -1,0 +1,328 @@
+# RazAV1 - языковой файл: русский
+# Переведено из en.txt. Переводится только текст после " = "; ключи слева не меняются.
+# {0}, {1} ... и названия программ и настроек [CRF, ISO, SVT-AV1, KNLMeansCL, Opus] остаются как есть.
+# \n - новая строка. Пропущенная или пустая строка остаётся на английском.
+
+language.name = Русский
+language.code = ru
+
+# ---- Главное окно ----
+main.razav1 = RazAV1
+main.simple_view = Простой вид
+main.switch_between_the_simple_view_encoder = Переключает между простым видом [только кодер и качество] и всеми настройками.
+main.history = История
+main.settings = Настройки
+main.about = О программе
+main.files = ФАЙЛЫ
+main.click_to_open_the_encoding_page = Нажмите, чтобы открыть страницу Кодирование
+main.drag_to_make_the_queue_or = Потяните, чтобы расширить очередь или настройки
+main.add_files = Добавить файлы
+main.add_video_files_ctrl_o = Добавить видеофайлы  [Ctrl+O]
+main.add_folder = Добавить папку
+main.add_every_video_in_a_folder = Добавить все видео из папки  [Ctrl+Shift+O]
+main.remove = Убрать
+main.remove_the_selected_files_from_the = Убирает выбранные файлы из очереди  [Delete]
+main.clear = Очистить
+main.empty_the_queue = Очищает очередь
+main.select_all = Выбрать все
+main.select_every_file_ctrl_a = Выбирает все файлы  [Ctrl+A]
+main.up = Вверх
+main.move_the_selected_files_earlier_in = Перемещает выбранные файлы выше в очереди  [Alt+Вверх]
+main.down = Вниз
+main.move_the_selected_files_later_in = Перемещает выбранные файлы ниже в очереди  [Alt+Вниз]
+main.analyse_plan = Анализ плана
+main.runs_only_the_crop_scan_and = Запускает только поиск обрезки и адаптивный анализ зерна для выбранных файлов, чтобы можно было изменить план до кодирования.
+main.edit_grain_plan = Изменить план зерна
+main.timeline_of_the_adaptive_plan_change = Шкала адаптивного плана: меняйте уровень шумоподавления и ISO зерна любой сцены.
+main.select_several_files_to_change_them = Выберите несколько файлов, чтобы изменить их вместе. Аудиодорожки и субтитры выбираются для каждого файла отдельно.
+main.file = ФАЙЛ
+main.workflow = СЦЕНАРИЙ
+main.grain = ЗЕРНО
+main.encoder = КОДЕР
+main.crf = CRF
+main.denoise = ШУМОПОДАВЛЕНИЕ
+main.audio = АУДИО
+main.quality = КАЧЕСТВО
+main.status = СОСТОЯНИЕ
+main.drop_films_or_folders_here = Перетащите сюда фильмы или папки
+main.source = ИСТОЧНИК
+main.no_file_selected = Файл не выбран
+main.video = Видео
+main.profile = ПРОФИЛЬ
+main.save_as = Сохранить как...
+main.saves_the_settings_of_this_file = Сохраняет настройки этого файла [все вкладки] как новый профиль, чтобы выбрать их снова одним щелчком.
+main.what_this_file_will_get_with = Что получит этот файл с профилем и изменениями на вкладках.
+main.smaller_saves_the_most_space_better = Меньше экономит больше всего места. Лучше сохраняет больше деталей и даёт файлы крупнее. Сбалансированно - посередине. Всё остальное берётся из профиля.
+main.picked_from_the_source_when_the = Выбирается по источнику при добавлении файла: фильм или эпизод, 1080p или 4K, SDR или HDR.
+main.resolution = РАЗРЕШЕНИЕ
+main.crop = ОБРЕЗКА
+main.auto_removes_black_bars_after_checking = Авто убирает чёрные полосы после проверки всего фильма, так что сцены в более высоком формате сохраняют всю картинку.
+main.quality_crf = КАЧЕСТВО  [CRF]
+main.crf_1_63_lower_is_better = CRF 1-63: меньше - лучше качество и больше файл. Пусто - значение кодера по умолчанию.
+main.ready_made_choices_for_this_kind = Готовые варианты для такого источника. Введите в поле любое число для своего значения.
+main.speed_preset = СКОРОСТЬ  [PRESET]
+main.preset_1_to_13_lower_is = Preset от -1 до 13: меньше - медленнее и немного меньше файл. Пусто - значение кодера по умолчанию.
+main.lower_slower_a_little_smaller = меньше = медленнее, файл чуть меньше
+main.reset_this_tab_to_the_profile = Вернуть эту вкладку к профилю
+main.encoder_crf_preset_resolution_and_crop = Кодер, CRF, preset, разрешение и обрезка возвращаются к значениям профиля.
+main.denoise_and_grain = Шумоподавление и зерно
+main.amount = КОЛИЧЕСТВО
+main.grain_iso = ISO ЗЕРНА
+main.strength_of_the_grain_put_back = Сила возвращаемого зерна. Авто следует количеству [200, 400 или 800]. С адаптивным планом это ISO при типичном зерне фильма; сцены поднимаются или опускаются от него.
+main.denoiser = ФИЛЬТР ШУМОПОДАВЛЕНИЯ
+main.gpu_denoise_knlmeanscl = ШУМОПОДАВЛЕНИЕ НА GPU  [KNLMeansCL]
+main.multiplies_the_measured_or_fixed_strengt = Умножает измеренные [или фиксированные] силы. Меньше сохраняет больше собственного зерна и текстуры фильма; больше убирает больше и даёт файлы меньше.
+main.measure_it_on_each_film_calibration = Измерять на каждом фильме  [калибровка]
+main.before_the_encode_knlmeanscl_is_tuned = Перед кодированием KNLMeansCL настраивается на этот фильм, чтобы каждый уровень шумоподавления убирал столько же зерна, сколько уровни hqdn3d. Выкл.: фиксированные силы от 0.70 до 2.20 [или собственный список профиля].
+main.grain_grain_iso_denoiser_and_gpu = Зерно, ISO зерна, фильтр шумоподавления и сила GPU возвращаются к значениям профиля.
+main.audio_2 = Аудио
+main.audio_track = АУДИОДОРОЖКА
+main.picked_when_the_file_is_added = Выбирается при добавлении файла: ваш язык, не комментарий, больше всего каналов.
+main.format = ФОРМАТ
+main.channels = КАНАЛЫ
+main.bitrate = БИТРЕЙТ
+main.kb_s_blank_by_channel_count = кбит/с. Пусто = по числу каналов: стерео 160, 5.1 256 [или из профиля], 6.1 320, 7.1 384.
+main.kb_s_blank_automatic = кбит/с  [пусто = автоматически]
+main.loudness = ГРОМКОСТЬ
+main.even_it_out_ebu_r128 = Выровнять  [EBU R128]
+main.quiet_dialogue_comes_up_loud_explosions = Тихие диалоги становятся громче, громкие взрывы тише, все фильмы звучат на одном уровне. Выкл.: уровень остаётся точно как на диске.
+main.format_channels_bitrate_and_loudness_go = Формат, каналы, битрейт и громкость возвращаются к значениям профиля [или Настройки > По умолчанию].
+main.subtitles = Субтитры
+main.subtitles_kept_tracks_go_into_the = СУБТИТРЫ  [оставленные дорожки попадают в файл в этом порядке; шрифты тоже]
+main.keep_drop = Оставить / убрать
+main.keep_the_selected_track_or_drop = Оставляет выбранную дорожку или убирает её. Двойной щелчок по дорожке делает то же самое.
+main.move_the_selected_kept_track_earlier = Переместить выбранную оставленную дорожку выше
+main.move_the_selected_kept_track_later = Переместить выбранную оставленную дорожку ниже
+main.on_by_default = Включены по умолчанию
+main.which_subtitle_the_player_switches_on = Какие субтитры плеер включает сам. Форсированные дорожки [надписи, иностранная речь] сохраняют метку форсированных.
+main.output = Вывод
+main.folder = ПАПКА
+main.browse = Обзор...
+main.the_folder_is_created_if_it = Папка создаётся, если её нет. План зерна, превью и журнал тоже попадают сюда.
+main.file_name = ИМЯ ФАЙЛА
+main.if_the_file_already_exists = ЕСЛИ ФАЙЛ УЖЕ ЕСТЬ
+main.folder_name_and_the_existing_file = Папка, имя и правило для существующего файла возвращаются к значениям профиля [или Настройки > По умолчанию].
+main.source_2 = Источник
+main.what_is_in_the_file_read = ЧТО ВНУТРИ ФАЙЛА  [только чтение]
+main.advanced = Дополнительно
+main.encoder_options_blank_profile_or_encoder = ПАРАМЕТРЫ КОДЕРА  [пусто = профиль или значение кодера по умолчанию]
+main.keyframes = Ключевые кадры
+main.frames_between_keyframes_240_or_seconds = Кадров между ключевыми кадрами [240] или секунд [10s]. Пусто - значение сценария или кодера по умолчанию.
+main.tune = Tune
+main.tune_0_visual_quality_1_psnr = --tune: 0 = визуальное качество, 1 = PSNR, 2 = SSIM [у форков есть ещё, см. их документацию]. Пусто = профиль или значение кодера по умолчанию.
+main.variance_boost = Variance boost
+main.0_off_1_4_more_bits = 0 = выкл., 1-4 = больше бит для ровных, малоконтрастных участков [кожа, небо, тёмные сцены]. Пусто = профиль или значение кодера по умолчанию.
+main.synthetic_grain = Синтетическое зерно
+main.0_50_svt_av1_s_own = 0-50: собственное зерно SVT-AV1, используется только если таблица зерна не выбрана. Пусто или 0 = выкл.
+main.switches = ПЕРЕКЛЮЧАТЕЛИ
+main.dark_scene_tuning_more_bits_for = Настройка тёмных сцен  [больше бит для тёмных кадров, плавнее градиенты]
+main.luminance_qp_bias_and_quantisation_matri = --luminance-qp-bias и матрицы квантования [--enable-qm], как в RAZ Triangle. Работает с любым кодером.
+main.keyframes_on_scene_cuts_experimental = Ключевые кадры на сменах сцен  [экспериментально]
+main.puts_keyframes_on_the_main_scene = Ставит ключевые кадры на основные смены сцен [--force-key-frames], не чаще чем раз в 2 с. Лучше перемотка и нет провала качества сразу после склейки, файл чуть больше. Использует сканирование адаптивного плана или один раз сканирует фильм перед кодированием.
+main.extra_options_passed_to_the_encoder = Дополнительные параметры, передаются кодеру как написаны
+main.for_example_tune_2_enable_tf = Например: --tune 2 --enable-tf 0. Они идут последними, поэтому переопределяют всё, что задаёт профиль. Проверяются по --help этого кодера при нажатии Старт.
+main.keyframes_tune_variance_boost_synthetic_ = Ключевые кадры, tune, variance boost, синтетическое зерно, переключатели и дополнительные параметры возвращаются к значениям профиля.
+main.command = Команда
+main.copy = Копировать
+main.what_the_engine_runs_for_this = ЧТО ДВИЖОК ЗАПУСКАЕТ ДЛЯ ЭТОГО ФАЙЛА  [только чтение]
+main.encoding = КОДИРОВАНИЕ
+main.idle = Ожидание
+main.add_files_check_the_settings_then = Добавьте файлы, проверьте настройки и нажмите Старт.
+main.estimated_size = ОЖИДАЕМЫЙ РАЗМЕР
+main.time_left = ОСТАЛОСЬ
+main.average_speed = СРЕДНЯЯ СКОРОСТЬ
+main.frames = КАДРЫ
+main.open_preview_reel = Открыть превью
+main.encode = Кодировать
+main.wait_i_am_watching = Подождите, я смотрю
+main.skip_file = Пропустить файл
+main.open_folder = Открыть папку
+main.opens_the_folder_of_the_last = Открывает папку последнего готового файла
+main.play_result = Воспроизвести результат
+main.plays_the_last_finished_file = Воспроизводит последний готовый файл
+main.cancel = Отмена
+main.follow = Следить
+main.copy_diagnostics = Копировать диагностику
+main.copies_versions_settings_and_the_latest = Копирует версии, настройки и последние строки журнала, готовые для вставки в issue на GitHub.
+main.open_logs_folder = Открыть папку журналов
+main.engine_output = ВЫВОД ДВИЖКА
+main.cpu = CPU
+main.when_done = По завершении
+main.pause_after_the_preview_so_i = Пауза после превью, чтобы я мог его одобрить
+main.stop_after_this_file = Остановить после этого файла
+main.abort_now = Прервать сейчас
+main.stops_the_encoder_at_once_a = Сразу останавливает кодер. Готовый видеопоток сохраняется для продолжения; недоделанный теряется.
+main.start_encoding = НАЧАТЬ КОДИРОВАНИЕ
+
+# ---- Варианты в списках ----
+choices.1_1080p_movie = 1. Фильм 1080p
+choices.2_1080p_tv_episode = 2. Эпизод сериала 1080p
+choices.3_4k_sdr_to_1080p_lanczos = 3. 4K SDR в 1080p  [уменьшение Lanczos]
+choices.4_4k_hdr_dolby_vision_to = 4. 4K HDR / Dolby Vision в 1080p SDR  [тонмаппинг Hable]
+choices.5_anime_no_denoise_10_s = 5. Аниме  [без шумоподавления, keyint 10 с, VB 1]
+choices.6_4k_sdr_to_4k_sdr = 6. 4K SDR в 4K SDR  [родное разрешение]
+choices.7_4k_hdr_to_4k_hdr10 = 7. 4K HDR в 4K HDR10  [HDR10 сохраняется, слой DV убирается]
+choices.none_digital_clean_no_grain_table = Нет  [чистая цифра, без таблицы зерна]
+choices.iso_200_clean_digital_sensor_noise = ISO 200  [чистый шум цифровой матрицы]
+choices.iso_400_standard_35mm = ISO 400  [стандартная 35-мм плёнка]
+choices.iso_800_gritty_16mm_high_noise = ISO 800  [зернистая 16 мм, сильный шум]
+choices.light_modern_digital_baseline_level_2 = Лёгкое  [современная цифра, базовый уровень 2]
+choices.medium_typical_35mm_baseline_level_3 = Среднее  [типичная 35 мм, базовый уровень 3]
+choices.heavy_16mm_or_old_film_baseline = Сильное  [16 мм или старый фильм, базовый уровень 4]
+choices.max_abovenormal_ecoqos_off_all_cores = Максимум  [AboveNormal, EcoQoS выкл., все ядра]
+choices.normal_ecoqos_off = Обычный  [EcoQoS выкл.]
+choices.low_belownormal_pc_stays_smooth = Низкий  [BelowNormal, ПК остаётся отзывчивым]
+choices.nothing = Ничего
+choices.sleep = Сон
+choices.shut_down = Выключить
+
+# ---- Тексты, задаваемые во время работы ----
+text.advanced_view = Расширенный вид
+text.changed_from_the_profile = Изменено относительно профиля
+text.0_more_detail = {0} - больше деталей
+text.0_recommended_for_1 = {0} - рекомендуется для: {1}
+text.0_smaller_files = {0} - файлы меньше
+text.custom_type_a_number = Своё  [введите число]
+text.as_on_the_disc = Как на диске
+text.none_off_until_you_turn_one = Нет  [выкл., пока вы не включите]
+text.auto_follows_the_window = Авто  [по размеру окна]
+text.static_one_strength_for_the_whole = Статичное  [одна сила на весь фильм]
+text.adaptive_per_scene_strength_from_the = Адаптивное  [сила для каждой сцены из плана зерна]
+text.knlmeanscl_gpu_vapoursynth = KNLMeansCL  [GPU, VapourSynth]
+text.hqdn3d_cpu_classic = hqdn3d  [CPU, классика]
+text.none = Нет
+text.auto_scans_the_whole_film_keeps = Авто  [сканирует весь фильм, сохраняет каждое соотношение сторон]
+text.off_keep_the_full_frame = Выкл.  [весь кадр]
+text.as_the_workflow_sets_it = Как задаёт сценарий
+text.1080p_scale_down_to_1920_wide = 1080p  [уменьшить до 1920 по ширине]
+text.720p_scale_down_to_1280_wide = 720p  [уменьшить до 1280 по ширине]
+text.auto_from_the_grain_choice = Авто  [по выбору зерна]
+text.opus_small_sounds_the_same = Opus  [маленький, звучит так же]
+text.keep_the_original_copy_e_g = Оставить оригинал  [копия, например TrueHD Atmos; намного больше]
+text.auto_7_1_and_6_1 = Авто  [7.1 и 6.1 становятся 5.1, меньшее остаётся как есть]
+text.keep_the_channels_7_1_stays = Сохранить каналы  [7.1 остаётся 7.1]
+text.stereo_for_tv_speakers_and_headphones = Стерео  [для динамиков ТВ и наушников]
+text.films = фильмы
+text.series_and_anime = сериалы и аниме
+
+# ---- Настройки ----
+settings.settings = НАСТРОЙКИ
+settings.portable_pack_bin_tables_and_vs = ПОРТАТИВНЫЙ ПАКЕТ  [bin, tables и vs рядом с программой используются в первую очередь]
+settings.build_portable_pack = Собрать портативный пакет
+settings.check_svt_av1_update = Проверить обновление SVT-AV1
+settings.install_svt_av1_build = Установить сборку SVT-AV1
+settings.svtav1encapp_exe = SVTAV1ENCAPP.EXE
+settings.browse = Обзор
+settings.grain_tables_folder = ПАПКА ТАБЛИЦ ЗЕРНА
+settings.vspipe_exe_vapoursynth_leave_as_vspipe = VSPIPE.EXE  [VapourSynth - оставьте vspipe, если он есть в PATH]
+settings.check_vapoursynth = Проверить VapourSynth
+settings.find_the_fastest_gpu = Найти самый быстрый GPU
+settings.knlmeanscl_gpu_device_set_by_find = GPU ДЛЯ KNLMEANSCL  [задаётся кнопкой Найти самый быстрый GPU]
+settings.preferred_audio_language_eng_rum_jpn = ПРЕДПОЧИТАЕМЫЙ ЯЗЫК АУДИО  [eng, rus, jpn, ...]
+settings.seconds_before_a_question_continues_by = СЕКУНД, ПОКА ВОПРОС НЕ ПРОДОЛЖИТСЯ САМ
+settings.default_profile_for_new_files = ПРОФИЛЬ ПО УМОЛЧАНИЮ ДЛЯ НОВЫХ ФАЙЛОВ
+settings.extras = ДОПОЛНИТЕЛЬНО
+settings.score_every_probe_against_the_source = Оценивать каждую пробу по сравнению с источником [VMAF, или SSIM, если в ffmpeg нет libvmaf]
+settings.run_the_engine_in_its_own = Запускать движок в отдельном окне консоли вместо вывода в главном окне
+settings.appearance_applies_at_once = ВНЕШНИЙ ВИД  [применяется сразу]
+settings.ui_size = Размер интерфейса
+settings.language = Язык
+settings.files_in_the_lang_folder_a = Файлы в папке lang. Новый язык: скопируйте lang\en.txt, см. lang\README.txt.
+settings.defaults_for_every_profile_crop_audio = ПО УМОЛЧАНИЮ ДЛЯ ВСЕХ ПРОФИЛЕЙ  [обрезка, аудио и вывод, если профиль оставляет их пустыми, как стандартные]
+settings.even_out_the_loudness_ebu_r128 = Выравнивать громкость  [EBU R128]
+settings.crop = Обрезка
+settings.folder_for_finished_files_blank_next = Папка для готовых файлов. Пусто = рядом с источником.
+settings.name = Имя
+settings.when_the_file_already_exists = Если файл уже есть
+settings.picture_tuning_denoise_grain_dark_scenes = Настройка картинки [шумоподавление, зерно, тёмные сцены] остаётся в каждом профиле. Это касается самого файла, поэтому стандартный профиль тоже это получает. Файлы, уже стоящие в очереди, сохраняют своё; Вернуть эту вкладку к профилю берёт новые значения по умолчанию.
+settings.save = Сохранить
+
+# ---- Установка и обновления ----
+setup.setup_and_updates = Установка и обновления
+setup.setup_and_updates_2 = УСТАНОВКА И ОБНОВЛЕНИЯ
+setup.downloads_and_sets_up_everything_the = Скачивает и настраивает всё, что нужно кодеру, в папки рядом с ним, так что эта папка работает на любом ПК. Каждый шаг идёт в своём маленьком окне [curl и tar, встроенные в Windows]. Только ваши таблицы зерна кладутся в папку tables вручную. Каждое обновление сначала проверяется, а предыдущая версия сохраняется.
+setup.ffmpeg_ffprobe_btbn_builds_on_github = FFMPEG + FFPROBE  [сборки BtbN на GitHub, новейшая ветка релизов]
+setup.download_update = Скачать / обновить
+setup.vapoursynth_knlmeanscl_l_smash_works_off = VAPOURSYNTH + KNLMEANSCL + L-SMASH WORKS  [официальный портативный релиз]
+setup.svt_av1_official_encoder_compiled_here = SVT-AV1  [официальный кодер, собирается здесь из github.com/AOMediaCodec/SVT-AV1]
+setup.build_latest = Собрать последнюю
+setup.svt_av1_essential_optional_fork_by = SVT-AV1-ESSENTIAL  [необязательный форк от nekotrix, собирается здесь]
+setup.official_build = Официальная сборка
+setup.install_the_fork_s_own_windows = Устанавливает собственную Windows-сборку форка вместо сборки здесь [инструменты сборки не нужны].
+setup.roll_back = Откатить
+setup.svt_av1_hdr_optional_fork_by = SVT-AV1-HDR  [необязательный форк от juliobbv, собирается здесь]
+setup.the_forks_are_compiled_with_the = Форки собираются теми же инструментами, что и SVT-AV1; если не получается, используется их официальная Windows-сборка. Официальная сборка полностью пропускает компиляцию. Собранные здесь версии поддерживают метаданные Dolby Vision / HDR10+, только если найдены их дополнительные библиотеки; строка состояния показывает, какие.
+setup.grain_tables_by_hand = ТАБЛИЦЫ ЗЕРНА  [вручную]
+setup.open_tables_folder = Открыть папку tables
+setup.make_grain_tables = Создать таблицы зерна
+setup.every_iso_step_from_100_to = Каждая ступень ISO от 100 до 6400 для обычных размеров 1080p, 720p и 4K [SDR, а для 4K ещё HDR10/HLG]. Любой другой размер создаётся автоматически, когда он нужен для кодирования.
+setup.set_up_everything = Установить всё
+setup.check_for_updates = Проверить обновления
+setup.roll_back_ffmpeg = Откатить ffmpeg
+setup.roll_back_svt_av1 = Откатить SVT-AV1
+setup.close = Закрыть
+setup.stop_waiting = Не ждать
+setup.log = ЖУРНАЛ
+
+# ---- Редактор плана зерна ----
+plan.grain_plan = План зерна
+plan.grain_plan_2 = ПЛАН ЗЕРНА
+plan.timeline_bar_height_and_colour_denoise = ШКАЛА  [высота и цвет полосы = уровень шумоподавления; щелчок по сцене, Shift+щелчок для диапазона, протяните, чтобы выбрать несколько]
+plan.text = #
+plan.start = НАЧАЛО
+plan.end = КОНЕЦ
+plan.length = ДЛИНА
+plan.level = УРОВЕНЬ
+plan.iso = ISO
+plan.frame_from_the_middle_of_the = КАДР ИЗ СЕРЕДИНЫ СЦЕНЫ
+plan.select_a_scene = Выберите сцену
+plan.set_the_selected_scenes_to = УСТАНОВИТЬ ДЛЯ ВЫБРАННЫХ СЦЕН
+plan.level_2 = Уровень
+plan.apply = Применить
+plan.iso_follows_the_level_1_100 = ISO следует уровню [1 = 100, 2 = 200, 3 = 400, 4 = 800, 5 = 1600]
+plan.keys_in_the_list_1_5 = Клавиши в списке: 1-5 задают уровень, Ctrl+A выбирает всё. Уровень 1 - самое лёгкое шумоподавление, 5 - самое сильное. Ступень ISO выбирает таблицу зерна, которая накладывается обратно.
+plan.all_one_level_stronger = Все на уровень сильнее
+plan.all_one_level_lighter = Все на уровень слабее
+plan.back_to_the_analysed_plan = Вернуть проанализированный план
+plan.save_plan = Сохранить план
+
+# ---- История ----
+history.history = ИСТОРИЯ
+history.date = ДАТА
+history.av1 = AV1
+history.saved = СЭКОНОМЛЕНО
+history.time = ВРЕМЯ
+history.play = Воспроизвести
+
+# ---- Сообщения и вопросы ----
+message.update_after_the_encode_has_finished = Обновите после завершения кодирования.
+message.that_name_has_no_usable_characters = В этом имени нет допустимых символов.
+message.add_at_least_one_film_first = Сначала добавьте хотя бы один фильм.
+message.master_encode_bat_must_sit_next = master_encode.bat должен лежать рядом с av1_helper.ps1.
+message.this_file_has_no_grain_plan = У этого файла ещё нет плана зерна. Сначала нажмите Анализ плана [или закодируйте его один раз в адаптивном режиме].
+message.plan_csv_has_no_scenes = В plan.csv нет сцен.
+message.default_output_folder_a_full_path = Папка вывода по умолчанию: полный путь вроде D:\AV1 или \\NAS\Films, или пусто - рядом с источником.
+message.default_file_name_it_cannot_be = Имя файла по умолчанию: не может быть пустым и содержать \ / : * ? " < > | % ! ^ &
+message.the_new_language_applies_the_next = Новый язык применится при следующем открытии окна.
+message.output_folder_a_full_path_like = Папка вывода: полный путь вроде D:\AV1 или \\NAS\Films.
+message.output_folder_these_characters_cannot_be = Папка вывода: эти символы использовать нельзя: * ? " < > | % !
+message.diagnostics_copied_paste_them_into_a = Диагностика скопирована. Вставьте её в issue на GitHub или в сообщение. В ней ваши настройки и пути к папкам, так что сначала просмотрите её.
+message.select_one_or_more_films_first = Сначала выберите один или несколько фильмов [у аниме нет плана зерна].
+message.welcome_the_encoder_can_download_and = Добро пожаловать. Кодер может скачать и настроить всё, что ему нужно [ffmpeg, VapourSynth и SVT-AV1, собранный на этом ПК], в собственные папки. Нажмите "Установить всё" в следующем окне. Ваши таблицы зерна кладутся в папку tables.
+message.svtav1encapp_exe_was_not_found_use = SvtAv1EncApp.exe не найден. Соберите его через Установка и обновления или укажите путь в Настройках.
+message.the_encode_keeps_running_in_its = Кодирование продолжается в своём окне консоли. Закройте то окно, чтобы его остановить.
+message.save_as_profile = Сохранить как профиль
+message.name_for_the_new_profile_it = Имя нового профиля. Он сохраняется в папке profiles и появляется в списке профилей.
+message.welcome_to_razav1 = Добро пожаловать в RazAV1
+message.save_the_changes_to_the_grain = Сохранить изменения плана зерна?
+message.the_new_language_applies_when_the = Новый язык применится, когда окно откроется снова. Перезапустить окно сейчас? Очередь вернётся как есть.
+message.the_encoder_runs_inside_this_window = Кодер работает внутри этого окна. Если закрыть его, кодирование остановится. Прервать и закрыть?
+
+# ---- Кнопки в сообщениях ----
+button.ok = OK
+button.tuned_raz_triangle = Настроенный [RAZ Triangle]
+button.plain_av1_svt_av1_stock = Простой AV1 [SVT-AV1 stock]
+button.yes = Да
+button.no = Нет
+button.restart_now = Перезапустить сейчас
+button.later = Позже

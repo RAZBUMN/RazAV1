@@ -1,0 +1,328 @@
+# RazAV1 - fișier de limbă: română
+# Tradus din en.txt. Doar textul de după " = " este tradus; cheile din stânga rămân la fel.
+# {0}, {1} ... și numele programelor și setărilor [CRF, ISO, SVT-AV1, KNLMeansCL, Opus] rămân neschimbate.
+# \n este rând nou. Un rând lipsă sau gol rămâne în engleză.
+
+language.name = Română
+language.code = ro
+
+# ---- Fereastra principală ----
+main.razav1 = RazAV1
+main.simple_view = Vedere simplă
+main.switch_between_the_simple_view_encoder = Comută între vederea simplă [doar encoder și calitate] și toate setările.
+main.history = Istoric
+main.settings = Setări
+main.about = Despre
+main.files = FIȘIERE
+main.click_to_open_the_encoding_page = Clic pentru a deschide pagina Encodare
+main.drag_to_make_the_queue_or = Trage pentru a lărgi coada sau setările
+main.add_files = Adaugă fișiere
+main.add_video_files_ctrl_o = Adaugă fișiere video  [Ctrl+O]
+main.add_folder = Adaugă folder
+main.add_every_video_in_a_folder = Adaugă toate videoclipurile dintr-un folder  [Ctrl+Shift+O]
+main.remove = Elimină
+main.remove_the_selected_files_from_the = Elimină fișierele selectate din coadă  [Delete]
+main.clear = Golește
+main.empty_the_queue = Golește coada
+main.select_all = Selectează tot
+main.select_every_file_ctrl_a = Selectează toate fișierele  [Ctrl+A]
+main.up = Sus
+main.move_the_selected_files_earlier_in = Mută fișierele selectate mai sus în coadă  [Alt+Sus]
+main.down = Jos
+main.move_the_selected_files_later_in = Mută fișierele selectate mai jos în coadă  [Alt+Jos]
+main.analyse_plan = Analizează planul
+main.runs_only_the_crop_scan_and = Rulează doar scanarea pentru decupare și analiza adaptivă a granulației pentru fișierele selectate, ca să poți edita planul înainte de encodare.
+main.edit_grain_plan = Editează planul de granulație
+main.timeline_of_the_adaptive_plan_change = Cronologia planului adaptiv: schimbă nivelul de denoise și ISO-ul granulației pentru orice scenă.
+main.select_several_files_to_change_them = Selectează mai multe fișiere ca să le schimbi împreună. Pistele audio și de subtitrare se aleg pe rând, fișier cu fișier.
+main.file = FIȘIER
+main.workflow = FLUX
+main.grain = GRANULAȚIE
+main.encoder = ENCODER
+main.crf = CRF
+main.denoise = DENOISE
+main.audio = AUDIO
+main.quality = CALITATE
+main.status = STARE
+main.drop_films_or_folders_here = Trage aici filme sau foldere
+main.source = SURSĂ
+main.no_file_selected = Niciun fișier selectat
+main.video = Video
+main.profile = PROFIL
+main.save_as = Salvează ca...
+main.saves_the_settings_of_this_file = Salvează setările acestui fișier [toate filele] ca profil nou, ca să le poți alege din nou cu un clic.
+main.what_this_file_will_get_with = Ce va primi acest fișier, cu profilul și cu orice modificare făcută în file.
+main.smaller_saves_the_most_space_better = Mai mic economisește cel mai mult spațiu. Mai bun păstrează mai multe detalii și face fișiere mai mari. Echilibrat e la mijloc. Restul urmează profilul.
+main.picked_from_the_source_when_the = Ales din sursă când fișierul este adăugat: film sau episod, 1080p sau 4K, SDR sau HDR.
+main.resolution = REZOLUȚIE
+main.crop = DECUPARE
+main.auto_removes_black_bars_after_checking = Auto elimină benzile negre după ce verifică tot filmul, așa că scenele cu un format mai înalt își păstrează toată imaginea.
+main.quality_crf = CALITATE  [CRF]
+main.crf_1_63_lower_is_better = CRF 1-63: mai mic înseamnă calitate mai bună și fișier mai mare. Gol folosește valoarea implicită a encoderului.
+main.ready_made_choices_for_this_kind = Variante gata făcute pentru acest tip de sursă. Scrie orice număr în casetă pentru valoarea ta.
+main.speed_preset = VITEZĂ  [PRESET]
+main.preset_1_to_13_lower_is = Preset -1 până la 13: mai mic e mai lent și puțin mai mic. Gol folosește valoarea implicită a encoderului.
+main.lower_slower_a_little_smaller = mai mic = mai lent, puțin mai mic
+main.reset_this_tab_to_the_profile = Readu această filă la profil
+main.encoder_crf_preset_resolution_and_crop = Encoderul, CRF, presetul, rezoluția și decuparea revin la ce spune profilul.
+main.denoise_and_grain = Denoise și granulație
+main.amount = CANTITATE
+main.grain_iso = ISO GRANULAȚIE
+main.strength_of_the_grain_put_back = Puterea granulației adăugate înapoi. Auto urmează cantitatea [200, 400 sau 800]. Cu planul adaptiv, acesta e ISO-ul la granulația tipică a filmului; scenele urcă sau coboară de la el.
+main.denoiser = FILTRU DENOISE
+main.gpu_denoise_knlmeanscl = DENOISE PE GPU  [KNLMeansCL]
+main.multiplies_the_measured_or_fixed_strengt = Înmulțește puterile măsurate [sau fixe]. Mai mic păstrează mai mult din granulația și textura filmului; mai mare elimină mai mult și face fișiere mai mici.
+main.measure_it_on_each_film_calibration = Măsoară pe fiecare film  [calibrare]
+main.before_the_encode_knlmeanscl_is_tuned = Înainte de encodare, KNLMeansCL este reglat pe acest film astfel încât fiecare nivel de denoise să elimine atâta granulație cât elimină nivelurile hqdn3d. Oprit: puteri fixe de la 0.70 la 2.20 [sau lista proprie a profilului].
+main.grain_grain_iso_denoiser_and_gpu = Granulația, ISO-ul granulației, filtrul denoise și puterea GPU revin la ce spune profilul.
+main.audio_2 = Audio
+main.audio_track = PISTĂ AUDIO
+main.picked_when_the_file_is_added = Aleasă când fișierul este adăugat: limba ta, nu comentariu, cele mai multe canale.
+main.format = FORMAT
+main.channels = CANALE
+main.bitrate = BITRATE
+main.kb_s_blank_by_channel_count = kb/s. Gol = după numărul de canale: stereo 160, 5.1 256 [sau cât spune profilul], 6.1 320, 7.1 384.
+main.kb_s_blank_automatic = kb/s  [gol = automat]
+main.loudness = VOLUM
+main.even_it_out_ebu_r128 = Egalizează-l  [EBU R128]
+main.quiet_dialogue_comes_up_loud_explosions = Dialogul încet crește, exploziile puternice scad, fiecare film se aude la același nivel. Oprit: nivelul rămâne exact ca pe disc.
+main.format_channels_bitrate_and_loudness_go = Formatul, canalele, bitrate-ul și volumul revin la ce spune profilul [sau Setări > Implicite].
+main.subtitles = Subtitrări
+main.subtitles_kept_tracks_go_into_the = SUBTITRĂRI  [pistele păstrate intră în fișier în această ordine; fonturile vin și ele]
+main.keep_drop = Păstrează / renunță
+main.keep_the_selected_track_or_drop = Păstrează pista selectată sau renunță la ea. Dublu clic pe o pistă face același lucru.
+main.move_the_selected_kept_track_earlier = Mută pista păstrată selectată mai sus
+main.move_the_selected_kept_track_later = Mută pista păstrată selectată mai jos
+main.on_by_default = Pornită implicit
+main.which_subtitle_the_player_switches_on = Ce subtitrare pornește playerul singur. Pistele forțate [indicatoare, dialog străin] își păstrează marcajul de forțat.
+main.output = Ieșire
+main.folder = FOLDER
+main.browse = Răsfoiește...
+main.the_folder_is_created_if_it = Folderul este creat dacă nu există. Planul de granulație, preview-ul și jurnalul ajung tot aici.
+main.file_name = NUME FIȘIER
+main.if_the_file_already_exists = DACĂ FIȘIERUL EXISTĂ DEJA
+main.folder_name_and_the_existing_file = Folderul, numele și regula pentru fișier existent revin la ce spune profilul [sau Setări > Implicite].
+main.source_2 = Sursă
+main.what_is_in_the_file_read = CE CONȚINE FIȘIERUL  [doar citire]
+main.advanced = Avansat
+main.encoder_options_blank_profile_or_encoder = OPȚIUNI ENCODER  [gol = profilul sau valoarea implicită a encoderului]
+main.keyframes = Keyframe-uri
+main.frames_between_keyframes_240_or_seconds = Cadre între keyframe-uri [240] sau secunde [10s]. Gol folosește valoarea implicită a fluxului sau a encoderului.
+main.tune = Tune
+main.tune_0_visual_quality_1_psnr = --tune: 0 = calitate vizuală, 1 = PSNR, 2 = SSIM [fork-urile adaugă mai multe, vezi documentația lor]. Gol = profilul sau valoarea implicită a encoderului.
+main.variance_boost = Variance boost
+main.0_off_1_4_more_bits = 0 = oprit, 1-4 = mai mulți biți pentru zone plate, cu contrast scăzut [piele, cer, scene întunecate]. Gol = profilul sau valoarea implicită a encoderului.
+main.synthetic_grain = Granulație sintetică
+main.0_50_svt_av1_s_own = 0-50: granulația proprie a SVT-AV1, folosită doar când nu e aleasă nicio tabelă de granulație. Gol sau 0 = oprit.
+main.switches = COMUTATOARE
+main.dark_scene_tuning_more_bits_for = Reglaj pentru scene întunecate  [mai mulți biți pentru cadre întunecate, gradiente mai fine]
+main.luminance_qp_bias_and_quantisation_matri = --luminance-qp-bias și matrici de cuantizare [--enable-qm], ca în RAZ Triangle. Merge cu orice encoder.
+main.keyframes_on_scene_cuts_experimental = Keyframe-uri la schimbările de scenă  [experimental]
+main.puts_keyframes_on_the_main_scene = Pune keyframe-uri la principalele schimbări de scenă [--force-key-frames], la cel puțin 2 s distanță. Căutare mai bună și fără scădere de calitate imediat după tăietură, fișier puțin mai mare. Folosește scanarea planului adaptiv sau scanează filmul o dată înainte de encodare.
+main.extra_options_passed_to_the_encoder = Opțiuni extra, trimise encoderului exact cum sunt scrise
+main.for_example_tune_2_enable_tf = De exemplu: --tune 2 --enable-tf 0. Vin ultimele, deci înlocuiesc orice setează profilul. Sunt verificate cu --help al acestui encoder când apeși Start.
+main.keyframes_tune_variance_boost_synthetic_ = Keyframe-urile, tune, variance boost, granulația sintetică, comutatoarele și opțiunile extra revin la ce spune profilul.
+main.command = Comandă
+main.copy = Copiază
+main.what_the_engine_runs_for_this = CE RULEAZĂ MOTORUL PENTRU ACEST FIȘIER  [doar citire]
+main.encoding = ENCODARE
+main.idle = Inactiv
+main.add_files_check_the_settings_then = Adaugă fișiere, verifică setările, apoi apasă Start.
+main.estimated_size = MĂRIME ESTIMATĂ
+main.time_left = TIMP RĂMAS
+main.average_speed = VITEZĂ MEDIE
+main.frames = CADRE
+main.open_preview_reel = Deschide preview-ul
+main.encode = Encodează
+main.wait_i_am_watching = Așteaptă, mă uit
+main.skip_file = Sari peste fișier
+main.open_folder = Deschide folderul
+main.opens_the_folder_of_the_last = Deschide folderul ultimului fișier terminat
+main.play_result = Redă rezultatul
+main.plays_the_last_finished_file = Redă ultimul fișier terminat
+main.cancel = Anulează
+main.follow = Urmărește
+main.copy_diagnostics = Copiază diagnosticul
+main.copies_versions_settings_and_the_latest = Copiază versiunile, setările și ultimele rânduri din jurnal, gata de lipit într-un issue pe GitHub.
+main.open_logs_folder = Deschide folderul de jurnale
+main.engine_output = IEȘIREA MOTORULUI
+main.cpu = CPU
+main.when_done = La final
+main.pause_after_the_preview_so_i = Pauză după preview, ca să-l pot aproba
+main.stop_after_this_file = Oprește după acest fișier
+main.abort_now = Oprește acum
+main.stops_the_encoder_at_once_a = Oprește encoderul imediat. Un flux video terminat este păstrat pentru reluare; unul pe jumătate se pierde.
+main.start_encoding = PORNEȘTE ENCODAREA
+
+# ---- Opțiunile din liste ----
+choices.1_1080p_movie = 1. Film 1080p
+choices.2_1080p_tv_episode = 2. Episod TV 1080p
+choices.3_4k_sdr_to_1080p_lanczos = 3. 4K SDR la 1080p  [micșorare Lanczos]
+choices.4_4k_hdr_dolby_vision_to = 4. 4K HDR / Dolby Vision la 1080p SDR  [tonemap Hable]
+choices.5_anime_no_denoise_10_s = 5. Anime  [fără denoise, keyint 10 s, VB 1]
+choices.6_4k_sdr_to_4k_sdr = 6. 4K SDR la 4K SDR  [rezoluție nativă]
+choices.7_4k_hdr_to_4k_hdr10 = 7. 4K HDR la 4K HDR10  [HDR10 păstrat, stratul DV eliminat]
+choices.none_digital_clean_no_grain_table = Fără  [digital curat, fără tabelă de granulație]
+choices.iso_200_clean_digital_sensor_noise = ISO 200  [zgomot curat de senzor digital]
+choices.iso_400_standard_35mm = ISO 400  [35mm standard]
+choices.iso_800_gritty_16mm_high_noise = ISO 800  [16mm aspru, zgomot mare]
+choices.light_modern_digital_baseline_level_2 = Ușoară  [digital modern, nivel de bază 2]
+choices.medium_typical_35mm_baseline_level_3 = Medie  [35mm tipic, nivel de bază 3]
+choices.heavy_16mm_or_old_film_baseline = Puternică  [16mm sau film vechi, nivel de bază 4]
+choices.max_abovenormal_ecoqos_off_all_cores = Maxim  [AboveNormal, EcoQoS oprit, toate nucleele]
+choices.normal_ecoqos_off = Normal  [EcoQoS oprit]
+choices.low_belownormal_pc_stays_smooth = Scăzut  [BelowNormal, PC-ul rămâne fluid]
+choices.nothing = Nimic
+choices.sleep = Repaus
+choices.shut_down = Oprește PC-ul
+
+# ---- Texte puse în timp ce rulează programul ----
+text.advanced_view = Vedere avansată
+text.changed_from_the_profile = Schimbat față de profil
+text.0_more_detail = {0} - mai multe detalii
+text.0_recommended_for_1 = {0} - recomandat pentru {1}
+text.0_smaller_files = {0} - fișiere mai mici
+text.custom_type_a_number = Personalizat  [scrie un număr]
+text.as_on_the_disc = Ca pe disc
+text.none_off_until_you_turn_one = Niciuna  [oprită până pornești una]
+text.auto_follows_the_window = Auto  [urmează fereastra]
+text.static_one_strength_for_the_whole = Static  [o singură putere pentru tot filmul]
+text.adaptive_per_scene_strength_from_the = Adaptiv  [putere pe scenă, din planul de granulație]
+text.knlmeanscl_gpu_vapoursynth = KNLMeansCL  [GPU, VapourSynth]
+text.hqdn3d_cpu_classic = hqdn3d  [CPU, clasic]
+text.none = Fără
+text.auto_scans_the_whole_film_keeps = Auto  [scanează tot filmul, păstrează fiecare format de imagine]
+text.off_keep_the_full_frame = Oprit  [păstrează cadrul întreg]
+text.as_the_workflow_sets_it = Cum setează fluxul
+text.1080p_scale_down_to_1920_wide = 1080p  [micșorare la 1920 lățime]
+text.720p_scale_down_to_1280_wide = 720p  [micșorare la 1280 lățime]
+text.auto_from_the_grain_choice = Auto  [după alegerea granulației]
+text.opus_small_sounds_the_same = Opus  [mic, sună la fel]
+text.keep_the_original_copy_e_g = Păstrează originalul  [copie, de ex. TrueHD Atmos; mult mai mare]
+text.auto_7_1_and_6_1 = Auto  [7.1 și 6.1 devin 5.1, cele mai mici rămân cum sunt]
+text.keep_the_channels_7_1_stays = Păstrează canalele  [7.1 rămâne 7.1]
+text.stereo_for_tv_speakers_and_headphones = Stereo  [pentru boxele TV și căști]
+text.films = filme
+text.series_and_anime = seriale și anime
+
+# ---- Setări ----
+settings.settings = SETĂRI
+settings.portable_pack_bin_tables_and_vs = PACHET PORTABIL  [bin, tables și vs de lângă acest program sunt folosite primele]
+settings.build_portable_pack = Construiește pachetul portabil
+settings.check_svt_av1_update = Verifică actualizarea SVT-AV1
+settings.install_svt_av1_build = Instalează un build SVT-AV1
+settings.svtav1encapp_exe = SVTAV1ENCAPP.EXE
+settings.browse = Răsfoiește
+settings.grain_tables_folder = FOLDERUL CU TABELE DE GRANULAȚIE
+settings.vspipe_exe_vapoursynth_leave_as_vspipe = VSPIPE.EXE  [VapourSynth - lasă vspipe dacă este în PATH]
+settings.check_vapoursynth = Verifică VapourSynth
+settings.find_the_fastest_gpu = Găsește cel mai rapid GPU
+settings.knlmeanscl_gpu_device_set_by_find = DISPOZITIV GPU PENTRU KNLMEANSCL  [setat de Găsește cel mai rapid GPU]
+settings.preferred_audio_language_eng_rum_jpn = LIMBA AUDIO PREFERATĂ  [eng, rum, jpn, ...]
+settings.seconds_before_a_question_continues_by = SECUNDE ÎNAINTE CA O ÎNTREBARE SĂ CONTINUE SINGURĂ
+settings.default_profile_for_new_files = PROFIL IMPLICIT PENTRU FIȘIERE NOI
+settings.extras = EXTRA
+settings.score_every_probe_against_the_source = Dă scor fiecărei probe față de sursă [VMAF, sau SSIM când ffmpeg nu are libvmaf]
+settings.run_the_engine_in_its_own = Rulează motorul în propria fereastră de consolă în loc să-i arăți ieșirea în fereastra principală
+settings.appearance_applies_at_once = ASPECT  [se aplică imediat]
+settings.ui_size = Mărimea interfeței
+settings.language = Limbă
+settings.files_in_the_lang_folder_a = Fișierele din folderul lang. O limbă nouă: copiază lang\en.txt, vezi lang\README.txt.
+settings.defaults_for_every_profile_crop_audio = IMPLICITE PENTRU FIECARE PROFIL  [decupare, audio și ieșire, folosite când un profil le lasă goale, ca cele stock]
+settings.even_out_the_loudness_ebu_r128 = Egalizează volumul  [EBU R128]
+settings.crop = Decupare
+settings.folder_for_finished_files_blank_next = Folder pentru fișierele terminate. Gol = lângă sursă.
+settings.name = Nume
+settings.when_the_file_already_exists = Când fișierul există deja
+settings.picture_tuning_denoise_grain_dark_scenes = Reglajul imaginii [denoise, granulație, scene întunecate] rămâne la fiecare profil. Acestea țin de fișier, așa că și un profil stock le primește. Fișierele deja în coadă păstrează ce au; Readu această filă preia noile valori implicite.
+settings.save = Salvează
+
+# ---- Instalare și actualizări ----
+setup.setup_and_updates = Instalare și actualizări
+setup.setup_and_updates_2 = INSTALARE ȘI ACTUALIZĂRI
+setup.downloads_and_sets_up_everything_the = Descarcă și pregătește tot ce îi trebuie encoderului în folderele de lângă el, așa că acest folder merge pe orice PC. Fiecare pas rulează în propria fereastră mică [curl și tar, incluse în Windows]. Doar tabelele tale de granulație se pun de mână în folderul tables. Fiecare actualizare este testată înainte, iar versiunea anterioară este păstrată.
+setup.ffmpeg_ffprobe_btbn_builds_on_github = FFMPEG + FFPROBE  [build-uri BtbN de pe GitHub, cea mai nouă ramură de release]
+setup.download_update = Descarcă / actualizează
+setup.vapoursynth_knlmeanscl_l_smash_works_off = VAPOURSYNTH + KNLMEANSCL + L-SMASH WORKS  [release portabil oficial]
+setup.svt_av1_official_encoder_compiled_here = SVT-AV1  [encoderul oficial, compilat aici din github.com/AOMediaCodec/SVT-AV1]
+setup.build_latest = Compilează ultima versiune
+setup.svt_av1_essential_optional_fork_by = SVT-AV1-ESSENTIAL  [fork opțional de nekotrix, compilat aici]
+setup.official_build = Build oficial
+setup.install_the_fork_s_own_windows = Instalează build-ul de Windows al fork-ului în loc să-l compilezi aici [nu trebuie unelte de compilare].
+setup.roll_back = Revino
+setup.svt_av1_hdr_optional_fork_by = SVT-AV1-HDR  [fork opțional de juliobbv, compilat aici]
+setup.the_forks_are_compiled_with_the = Fork-urile sunt compilate cu aceleași unelte ca SVT-AV1; dacă nu merge, se folosește build-ul lor oficial de Windows. Build oficial sare complet peste compilare. Build-urile compilate aici au suport pentru metadate Dolby Vision / HDR10+ doar dacă au fost găsite bibliotecile lor extra; linia de stare spune care.
+setup.grain_tables_by_hand = TABELE DE GRANULAȚIE  [de mână]
+setup.open_tables_folder = Deschide folderul tables
+setup.make_grain_tables = Fă tabelele de granulație
+setup.every_iso_step_from_100_to = Fiecare treaptă ISO de la 100 la 6400 pentru mărimile obișnuite 1080p, 720p și 4K [SDR, plus HDR10/HLG pentru 4K]. Orice altă mărime este făcută automat când o encodare are nevoie de ea.
+setup.set_up_everything = Instalează tot
+setup.check_for_updates = Caută actualizări
+setup.roll_back_ffmpeg = Revino la ffmpeg anterior
+setup.roll_back_svt_av1 = Revino la SVT-AV1 anterior
+setup.close = Închide
+setup.stop_waiting = Nu mai aștepta
+setup.log = JURNAL
+
+# ---- Editorul planului de granulație ----
+plan.grain_plan = Plan de granulație
+plan.grain_plan_2 = PLAN DE GRANULAȚIE
+plan.timeline_bar_height_and_colour_denoise = CRONOLOGIE  [înălțimea și culoarea barei = nivelul de denoise; clic pe o scenă, shift-clic pentru un interval, trage peste ca să selectezi mai multe]
+plan.text = #
+plan.start = ÎNCEPUT
+plan.end = SFÂRȘIT
+plan.length = DURATĂ
+plan.level = NIVEL
+plan.iso = ISO
+plan.frame_from_the_middle_of_the = CADRU DIN MIJLOCUL SCENEI
+plan.select_a_scene = Selectează o scenă
+plan.set_the_selected_scenes_to = SETEAZĂ SCENELE SELECTATE LA
+plan.level_2 = Nivel
+plan.apply = Aplică
+plan.iso_follows_the_level_1_100 = ISO urmează nivelul [1 = 100, 2 = 200, 3 = 400, 4 = 800, 5 = 1600]
+plan.keys_in_the_list_1_5 = Taste în listă: 1-5 setează nivelul, Ctrl+A selectează tot. Nivelul 1 este cel mai ușor denoise, 5 cel mai puternic. Treapta ISO alege tabela de granulație pusă înapoi deasupra.
+plan.all_one_level_stronger = Toate cu un nivel mai puternic
+plan.all_one_level_lighter = Toate cu un nivel mai ușor
+plan.back_to_the_analysed_plan = Înapoi la planul analizat
+plan.save_plan = Salvează planul
+
+# ---- Istoric ----
+history.history = ISTORIC
+history.date = DATA
+history.av1 = AV1
+history.saved = ECONOMISIT
+history.time = TIMP
+history.play = Redă
+
+# ---- Mesaje și întrebări ----
+message.update_after_the_encode_has_finished = Actualizează după ce se termină encodarea.
+message.that_name_has_no_usable_characters = Acest nume nu are caractere folosibile.
+message.add_at_least_one_film_first = Adaugă mai întâi cel puțin un film.
+message.master_encode_bat_must_sit_next = master_encode.bat trebuie să stea lângă av1_helper.ps1.
+message.this_file_has_no_grain_plan = Acest fișier nu are încă un plan de granulație. Apasă mai întâi Analizează planul [sau encodează-l o dată în modul adaptiv].
+message.plan_csv_has_no_scenes = plan.csv nu are scene.
+message.default_output_folder_a_full_path = Folder de ieșire implicit: o cale completă ca D:\AV1 sau \\NAS\Filme, sau gol pentru lângă sursă.
+message.default_file_name_it_cannot_be = Nume de fișier implicit: nu poate fi gol și nu poate conține \ / : * ? " < > | % ! ^ &
+message.the_new_language_applies_the_next = Noua limbă se aplică data viitoare când se deschide fereastra.
+message.output_folder_a_full_path_like = Folder de ieșire: o cale completă ca D:\AV1 sau \\NAS\Filme.
+message.output_folder_these_characters_cannot_be = Folder de ieșire: aceste caractere nu pot fi folosite: * ? " < > | % !
+message.diagnostics_copied_paste_them_into_a = Diagnosticul a fost copiat. Lipește-l într-un issue pe GitHub sau într-un mesaj. Conține setările și căile folderelor tale, așa că verifică-l înainte.
+message.select_one_or_more_films_first = Selectează mai întâi unul sau mai multe filme [anime nu are plan de granulație].
+message.welcome_the_encoder_can_download_and = Bun venit. Encoderul poate descărca și pregăti tot ce îi trebuie [ffmpeg, VapourSynth și SVT-AV1 compilat pe acest PC] în propriile foldere. Apasă "Instalează tot" în fereastra următoare. Tabelele tale de granulație merg în folderul tables.
+message.svtav1encapp_exe_was_not_found_use = SvtAv1EncApp.exe nu a fost găsit. Folosește Instalare și actualizări ca să-l compilezi sau setează-i calea în Setări.
+message.the_encode_keeps_running_in_its = Encodarea continuă în fereastra ei de consolă. Închide acea fereastră ca s-o oprești.
+message.save_as_profile = Salvează ca profil
+message.name_for_the_new_profile_it = Numele noului profil. Este salvat în folderul profiles și apare în lista de profiluri.
+message.welcome_to_razav1 = Bun venit în RazAV1
+message.save_the_changes_to_the_grain = Salvezi modificările din planul de granulație?
+message.the_new_language_applies_when_the = Noua limbă se aplică atunci când fereastra se deschide din nou. Repornești fereastra acum? Coada revine exact cum este.
+message.the_encoder_runs_inside_this_window = Encoderul rulează în această fereastră. Dacă o închizi, encodarea se oprește. Oprești și închizi?
+
+# ---- Butoanele din mesaje ----
+button.ok = OK
+button.tuned_raz_triangle = Reglat [RAZ Triangle]
+button.plain_av1_svt_av1_stock = AV1 simplu [SVT-AV1 stock]
+button.yes = Da
+button.no = Nu
+button.restart_now = Repornește acum
+button.later = Mai târziu

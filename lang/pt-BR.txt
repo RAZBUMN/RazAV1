@@ -1,0 +1,328 @@
+# RazAV1 - arquivo de idioma: português (Brasil)
+# Traduzido de en.txt. Só o texto depois de " = " é traduzido; as chaves à esquerda não mudam.
+# {0}, {1} ... e os nomes de programas e ajustes [CRF, ISO, SVT-AV1, KNLMeansCL, Opus] ficam como estão.
+# \n é uma nova linha. Uma linha que falta ou está vazia fica em inglês.
+
+language.name = Português (Brasil)
+language.code = pt-BR
+
+# ---- Janela principal ----
+main.razav1 = RazAV1
+main.simple_view = Visão simples
+main.switch_between_the_simple_view_encoder = Alterna entre a visão simples [só codificador e qualidade] e todas as configurações.
+main.history = Histórico
+main.settings = Configurações
+main.about = Sobre
+main.files = ARQUIVOS
+main.click_to_open_the_encoding_page = Clique para abrir a página Codificação
+main.drag_to_make_the_queue_or = Arraste para alargar a fila ou as configurações
+main.add_files = Adicionar arquivos
+main.add_video_files_ctrl_o = Adicionar arquivos de vídeo  [Ctrl+O]
+main.add_folder = Adicionar pasta
+main.add_every_video_in_a_folder = Adicionar todos os vídeos de uma pasta  [Ctrl+Shift+O]
+main.remove = Remover
+main.remove_the_selected_files_from_the = Remove os arquivos selecionados da fila  [Delete]
+main.clear = Limpar
+main.empty_the_queue = Esvazia a fila
+main.select_all = Selecionar tudo
+main.select_every_file_ctrl_a = Seleciona todos os arquivos  [Ctrl+A]
+main.up = Subir
+main.move_the_selected_files_earlier_in = Sobe os arquivos selecionados na fila  [Alt+Cima]
+main.down = Descer
+main.move_the_selected_files_later_in = Desce os arquivos selecionados na fila  [Alt+Baixo]
+main.analyse_plan = Analisar plano
+main.runs_only_the_crop_scan_and = Roda só a varredura de corte e a análise adaptativa de grão dos arquivos selecionados, para você editar o plano antes de codificar.
+main.edit_grain_plan = Editar plano de grão
+main.timeline_of_the_adaptive_plan_change = Linha do tempo do plano adaptativo: mude o nível de denoise e o ISO do grão de qualquer cena.
+main.select_several_files_to_change_them = Selecione vários arquivos para mudá-los juntos. As faixas de áudio e legenda são escolhidas um arquivo por vez.
+main.file = ARQUIVO
+main.workflow = FLUXO
+main.grain = GRÃO
+main.encoder = CODIFICADOR
+main.crf = CRF
+main.denoise = DENOISE
+main.audio = ÁUDIO
+main.quality = QUALIDADE
+main.status = ESTADO
+main.drop_films_or_folders_here = Solte filmes ou pastas aqui
+main.source = ORIGEM
+main.no_file_selected = Nenhum arquivo selecionado
+main.video = Vídeo
+main.profile = PERFIL
+main.save_as = Salvar como...
+main.saves_the_settings_of_this_file = Salva as configurações deste arquivo [todas as abas] como um novo perfil, para escolhê-las de novo com um clique.
+main.what_this_file_will_get_with = O que este arquivo vai receber, com o perfil e as mudanças feitas nas abas.
+main.smaller_saves_the_most_space_better = Menor economiza mais espaço. Melhor mantém mais detalhes e gera arquivos maiores. Equilibrado fica no meio. O resto segue o perfil.
+main.picked_from_the_source_when_the = Escolhido pela origem quando o arquivo é adicionado: filme ou episódio, 1080p ou 4K, SDR ou HDR.
+main.resolution = RESOLUÇÃO
+main.crop = CORTE
+main.auto_removes_black_bars_after_checking = Auto remove as barras pretas depois de verificar o filme inteiro, assim cenas num formato mais alto mantêm a imagem completa.
+main.quality_crf = QUALIDADE  [CRF]
+main.crf_1_63_lower_is_better = CRF 1-63: menor é qualidade melhor e arquivo maior. Vazio usa o padrão do codificador.
+main.ready_made_choices_for_this_kind = Opções prontas para este tipo de origem. Digite qualquer número na caixa para o seu.
+main.speed_preset = VELOCIDADE  [PRESET]
+main.preset_1_to_13_lower_is = Preset -1 a 13: menor é mais lento e um pouco menor. Vazio usa o padrão do codificador.
+main.lower_slower_a_little_smaller = menor = mais lento, um pouco menor
+main.reset_this_tab_to_the_profile = Voltar esta aba ao perfil
+main.encoder_crf_preset_resolution_and_crop = Codificador, CRF, preset, resolução e corte voltam ao que o perfil diz.
+main.denoise_and_grain = Denoise e grão
+main.amount = QUANTIDADE
+main.grain_iso = ISO DO GRÃO
+main.strength_of_the_grain_put_back = Força do grão recolocado. Auto segue a quantidade [200, 400 ou 800]. Com o plano adaptativo, é o ISO do grão típico do filme; as cenas sobem ou descem a partir dele.
+main.denoiser = FILTRO DENOISE
+main.gpu_denoise_knlmeanscl = DENOISE NA GPU  [KNLMeansCL]
+main.multiplies_the_measured_or_fixed_strengt = Multiplica as forças medidas [ou fixas]. Menor mantém mais do grão e da textura do filme; maior remove mais e gera arquivos menores.
+main.measure_it_on_each_film_calibration = Medir em cada filme  [calibração]
+main.before_the_encode_knlmeanscl_is_tuned = Antes de codificar, o KNLMeansCL é ajustado a este filme para que cada nível de denoise remova tanto grão quanto os níveis do hqdn3d. Desligado: forças fixas de 0.70 a 2.20 [ou a lista do próprio perfil].
+main.grain_grain_iso_denoiser_and_gpu = Grão, ISO do grão, filtro denoise e força da GPU voltam ao que o perfil diz.
+main.audio_2 = Áudio
+main.audio_track = FAIXA DE ÁUDIO
+main.picked_when_the_file_is_added = Escolhida quando o arquivo é adicionado: seu idioma, sem comentário, o maior número de canais.
+main.format = FORMATO
+main.channels = CANAIS
+main.bitrate = BITRATE
+main.kb_s_blank_by_channel_count = kb/s. Vazio = pelo número de canais: estéreo 160, 5.1 256 [ou o do perfil], 6.1 320, 7.1 384.
+main.kb_s_blank_automatic = kb/s  [vazio = automático]
+main.loudness = VOLUME
+main.even_it_out_ebu_r128 = Nivelar  [EBU R128]
+main.quiet_dialogue_comes_up_loud_explosions = Diálogos baixos sobem, explosões altas descem, todo filme toca no mesmo nível. Desligado: o nível fica exatamente como no disco.
+main.format_channels_bitrate_and_loudness_go = Formato, canais, bitrate e volume voltam ao que o perfil [ou Configurações > Padrões] diz.
+main.subtitles = Legendas
+main.subtitles_kept_tracks_go_into_the = LEGENDAS  [as faixas mantidas entram no arquivo nesta ordem; as fontes vão junto]
+main.keep_drop = Manter / remover
+main.keep_the_selected_track_or_drop = Mantém a faixa selecionada ou a remove. Clique duplo numa faixa faz o mesmo.
+main.move_the_selected_kept_track_earlier = Sobe a faixa mantida selecionada
+main.move_the_selected_kept_track_later = Desce a faixa mantida selecionada
+main.on_by_default = Ligada por padrão
+main.which_subtitle_the_player_switches_on = Qual legenda o player liga sozinho. Faixas forçadas [placas, diálogo estrangeiro] mantêm a marca de forçada.
+main.output = Saída
+main.folder = PASTA
+main.browse = Procurar...
+main.the_folder_is_created_if_it = A pasta é criada se não existir. O plano de grão, a prévia e o log também vão para cá.
+main.file_name = NOME DO ARQUIVO
+main.if_the_file_already_exists = SE O ARQUIVO JÁ EXISTIR
+main.folder_name_and_the_existing_file = A pasta, o nome e a regra de arquivo existente voltam ao que o perfil [ou Configurações > Padrões] diz.
+main.source_2 = Origem
+main.what_is_in_the_file_read = O QUE HÁ NO ARQUIVO  [só leitura]
+main.advanced = Avançado
+main.encoder_options_blank_profile_or_encoder = OPÇÕES DO CODIFICADOR  [vazio = perfil ou padrão do codificador]
+main.keyframes = Quadros-chave
+main.frames_between_keyframes_240_or_seconds = Quadros entre quadros-chave [240] ou segundos [10s]. Vazio usa o padrão do fluxo ou do codificador.
+main.tune = Tune
+main.tune_0_visual_quality_1_psnr = --tune: 0 = qualidade visual, 1 = PSNR, 2 = SSIM [os forks têm mais, veja a documentação deles]. Vazio = perfil ou padrão do codificador.
+main.variance_boost = Variance boost
+main.0_off_1_4_more_bits = 0 = desligado, 1-4 = mais bits para áreas planas e de pouco contraste [pele, céus, cenas escuras]. Vazio = perfil ou padrão do codificador.
+main.synthetic_grain = Grão sintético
+main.0_50_svt_av1_s_own = 0-50: o grão próprio do SVT-AV1, usado só quando nenhuma tabela de grão é escolhida. Vazio ou 0 = desligado.
+main.switches = CHAVES
+main.dark_scene_tuning_more_bits_for = Ajuste para cenas escuras  [mais bits para quadros escuros, degradês mais suaves]
+main.luminance_qp_bias_and_quantisation_matri = --luminance-qp-bias e matrizes de quantização [--enable-qm], como no RAZ Triangle. Funciona com qualquer codificador.
+main.keyframes_on_scene_cuts_experimental = Quadros-chave nos cortes de cena  [experimental]
+main.puts_keyframes_on_the_main_scene = Coloca quadros-chave nos principais cortes de cena [--force-key-frames], com pelo menos 2 s de distância. Busca melhor e sem queda de qualidade logo após o corte, um arquivo um pouco maior. Usa a varredura do plano adaptativo ou varre o filme uma vez antes de codificar.
+main.extra_options_passed_to_the_encoder = Opções extras, passadas ao codificador como digitadas
+main.for_example_tune_2_enable_tf = Por exemplo: --tune 2 --enable-tf 0. Vêm por último, então substituem o que o perfil define. São conferidas com o --help deste codificador quando você aperta Iniciar.
+main.keyframes_tune_variance_boost_synthetic_ = Quadros-chave, tune, variance boost, grão sintético, as chaves e as opções extras voltam ao que o perfil diz.
+main.command = Comando
+main.copy = Copiar
+main.what_the_engine_runs_for_this = O QUE O MOTOR EXECUTA PARA ESTE ARQUIVO  [só leitura]
+main.encoding = CODIFICAÇÃO
+main.idle = Parado
+main.add_files_check_the_settings_then = Adicione arquivos, confira as configurações e aperte Iniciar.
+main.estimated_size = TAMANHO ESTIMADO
+main.time_left = TEMPO RESTANTE
+main.average_speed = VELOCIDADE MÉDIA
+main.frames = QUADROS
+main.open_preview_reel = Abrir a prévia
+main.encode = Codificar
+main.wait_i_am_watching = Espera, estou assistindo
+main.skip_file = Pular arquivo
+main.open_folder = Abrir pasta
+main.opens_the_folder_of_the_last = Abre a pasta do último arquivo terminado
+main.play_result = Reproduzir resultado
+main.plays_the_last_finished_file = Reproduz o último arquivo terminado
+main.cancel = Cancelar
+main.follow = Acompanhar
+main.copy_diagnostics = Copiar diagnóstico
+main.copies_versions_settings_and_the_latest = Copia versões, configurações e as últimas linhas do log, pronto para colar numa issue do GitHub.
+main.open_logs_folder = Abrir pasta de logs
+main.engine_output = SAÍDA DO MOTOR
+main.cpu = CPU
+main.when_done = Ao terminar
+main.pause_after_the_preview_so_i = Pausar depois da prévia para eu aprovar
+main.stop_after_this_file = Parar depois deste arquivo
+main.abort_now = Abortar agora
+main.stops_the_encoder_at_once_a = Para o codificador na hora. Um fluxo de vídeo terminado é guardado para retomar; um pela metade se perde.
+main.start_encoding = INICIAR CODIFICAÇÃO
+
+# ---- Opções das listas ----
+choices.1_1080p_movie = 1. Filme 1080p
+choices.2_1080p_tv_episode = 2. Episódio de TV 1080p
+choices.3_4k_sdr_to_1080p_lanczos = 3. 4K SDR para 1080p  [redução Lanczos]
+choices.4_4k_hdr_dolby_vision_to = 4. 4K HDR / Dolby Vision para 1080p SDR  [tonemap Hable]
+choices.5_anime_no_denoise_10_s = 5. Anime  [sem denoise, keyint 10 s, VB 1]
+choices.6_4k_sdr_to_4k_sdr = 6. 4K SDR para 4K SDR  [resolução nativa]
+choices.7_4k_hdr_to_4k_hdr10 = 7. 4K HDR para 4K HDR10  [HDR10 mantido, camada DV removida]
+choices.none_digital_clean_no_grain_table = Nenhum  [digital limpo, sem tabela de grão]
+choices.iso_200_clean_digital_sensor_noise = ISO 200  [ruído limpo de sensor digital]
+choices.iso_400_standard_35mm = ISO 400  [35mm padrão]
+choices.iso_800_gritty_16mm_high_noise = ISO 800  [16mm granulado, muito ruído]
+choices.light_modern_digital_baseline_level_2 = Leve  [digital moderno, nível base 2]
+choices.medium_typical_35mm_baseline_level_3 = Médio  [35mm típico, nível base 3]
+choices.heavy_16mm_or_old_film_baseline = Forte  [16mm ou filme antigo, nível base 4]
+choices.max_abovenormal_ecoqos_off_all_cores = Máximo  [AboveNormal, EcoQoS desligado, todos os núcleos]
+choices.normal_ecoqos_off = Normal  [EcoQoS desligado]
+choices.low_belownormal_pc_stays_smooth = Baixo  [BelowNormal, o PC continua fluido]
+choices.nothing = Nada
+choices.sleep = Suspender
+choices.shut_down = Desligar
+
+# ---- Textos definidos enquanto o programa roda ----
+text.advanced_view = Visão avançada
+text.changed_from_the_profile = Alterado em relação ao perfil
+text.0_more_detail = {0} - mais detalhes
+text.0_recommended_for_1 = {0} - recomendado para {1}
+text.0_smaller_files = {0} - arquivos menores
+text.custom_type_a_number = Personalizado  [digite um número]
+text.as_on_the_disc = Como no disco
+text.none_off_until_you_turn_one = Nenhuma  [desligada até você ligar uma]
+text.auto_follows_the_window = Auto  [segue a janela]
+text.static_one_strength_for_the_whole = Estático  [uma força para o filme todo]
+text.adaptive_per_scene_strength_from_the = Adaptativo  [força por cena, do plano de grão]
+text.knlmeanscl_gpu_vapoursynth = KNLMeansCL  [GPU, VapourSynth]
+text.hqdn3d_cpu_classic = hqdn3d  [CPU, clássico]
+text.none = Nenhum
+text.auto_scans_the_whole_film_keeps = Auto  [varre o filme todo, mantém cada proporção de imagem]
+text.off_keep_the_full_frame = Desligado  [mantém o quadro inteiro]
+text.as_the_workflow_sets_it = Como o fluxo define
+text.1080p_scale_down_to_1920_wide = 1080p  [reduzir para 1920 de largura]
+text.720p_scale_down_to_1280_wide = 720p  [reduzir para 1280 de largura]
+text.auto_from_the_grain_choice = Auto  [pela escolha de grão]
+text.opus_small_sounds_the_same = Opus  [pequeno, soa igual]
+text.keep_the_original_copy_e_g = Manter o original  [cópia, ex. TrueHD Atmos; bem maior]
+text.auto_7_1_and_6_1 = Auto  [7.1 e 6.1 viram 5.1, menores ficam como estão]
+text.keep_the_channels_7_1_stays = Manter os canais  [7.1 continua 7.1]
+text.stereo_for_tv_speakers_and_headphones = Estéreo  [para alto-falantes de TV e fones]
+text.films = filmes
+text.series_and_anime = séries e anime
+
+# ---- Configurações ----
+settings.settings = CONFIGURAÇÕES
+settings.portable_pack_bin_tables_and_vs = PACOTE PORTÁTIL  [bin, tables e vs ao lado deste programa são usados primeiro]
+settings.build_portable_pack = Criar pacote portátil
+settings.check_svt_av1_update = Verificar atualização do SVT-AV1
+settings.install_svt_av1_build = Instalar uma build do SVT-AV1
+settings.svtav1encapp_exe = SVTAV1ENCAPP.EXE
+settings.browse = Procurar
+settings.grain_tables_folder = PASTA DAS TABELAS DE GRÃO
+settings.vspipe_exe_vapoursynth_leave_as_vspipe = VSPIPE.EXE  [VapourSynth - deixe vspipe se ele estiver no PATH]
+settings.check_vapoursynth = Verificar VapourSynth
+settings.find_the_fastest_gpu = Encontrar a GPU mais rápida
+settings.knlmeanscl_gpu_device_set_by_find = DISPOSITIVO GPU DO KNLMEANSCL  [definido por Encontrar a GPU mais rápida]
+settings.preferred_audio_language_eng_rum_jpn = IDIOMA DE ÁUDIO PREFERIDO  [eng, por, jpn, ...]
+settings.seconds_before_a_question_continues_by = SEGUNDOS ANTES DE UMA PERGUNTA CONTINUAR SOZINHA
+settings.default_profile_for_new_files = PERFIL PADRÃO PARA ARQUIVOS NOVOS
+settings.extras = EXTRAS
+settings.score_every_probe_against_the_source = Pontuar cada teste em relação à origem [VMAF, ou SSIM quando o ffmpeg não tem libvmaf]
+settings.run_the_engine_in_its_own = Rodar o motor na própria janela de console em vez de mostrar a saída na janela principal
+settings.appearance_applies_at_once = APARÊNCIA  [aplica na hora]
+settings.ui_size = Tamanho da interface
+settings.language = Idioma
+settings.files_in_the_lang_folder_a = Arquivos da pasta lang. Um idioma novo: copie lang\en.txt, veja lang\README.txt.
+settings.defaults_for_every_profile_crop_audio = PADRÕES PARA CADA PERFIL  [corte, áudio e saída, usados quando um perfil os deixa vazios, como os stock]
+settings.even_out_the_loudness_ebu_r128 = Nivelar o volume  [EBU R128]
+settings.crop = Corte
+settings.folder_for_finished_files_blank_next = Pasta para os arquivos terminados. Vazio = ao lado da origem.
+settings.name = Nome
+settings.when_the_file_already_exists = Quando o arquivo já existe
+settings.picture_tuning_denoise_grain_dark_scenes = O ajuste da imagem [denoise, grão, cenas escuras] fica em cada perfil. Isto é sobre o arquivo, então um perfil stock também recebe. Arquivos já na fila mantêm o que têm; Voltar esta aba ao perfil pega os novos padrões.
+settings.save = Salvar
+
+# ---- Instalação e atualizações ----
+setup.setup_and_updates = Instalação e atualizações
+setup.setup_and_updates_2 = INSTALAÇÃO E ATUALIZAÇÕES
+setup.downloads_and_sets_up_everything_the = Baixa e prepara tudo o que o codificador precisa nas pastas ao lado dele, então esta pasta funciona em qualquer PC. Cada etapa roda na sua própria janelinha [curl e tar, embutidos no Windows]. Só as suas tabelas de grão vão à mão para a pasta tables. Cada atualização é testada antes e a versão anterior é guardada.
+setup.ffmpeg_ffprobe_btbn_builds_on_github = FFMPEG + FFPROBE  [builds do BtbN no GitHub, ramo de versão mais novo]
+setup.download_update = Baixar / atualizar
+setup.vapoursynth_knlmeanscl_l_smash_works_off = VAPOURSYNTH + KNLMEANSCL + L-SMASH WORKS  [versão portátil oficial]
+setup.svt_av1_official_encoder_compiled_here = SVT-AV1  [codificador oficial, compilado aqui a partir de github.com/AOMediaCodec/SVT-AV1]
+setup.build_latest = Compilar a mais nova
+setup.svt_av1_essential_optional_fork_by = SVT-AV1-ESSENTIAL  [fork opcional de nekotrix, compilado aqui]
+setup.official_build = Build oficial
+setup.install_the_fork_s_own_windows = Instala a build de Windows do próprio fork em vez de compilar aqui [não precisa de ferramentas de compilação].
+setup.roll_back = Reverter
+setup.svt_av1_hdr_optional_fork_by = SVT-AV1-HDR  [fork opcional de juliobbv, compilado aqui]
+setup.the_forks_are_compiled_with_the = Os forks são compilados com as mesmas ferramentas do SVT-AV1; se falhar, a build oficial de Windows deles é usada. Build oficial pula a compilação por completo. As builds compiladas aqui suportam metadados Dolby Vision / HDR10+ só se as bibliotecas extras deles foram encontradas; a linha de estado diz quais.
+setup.grain_tables_by_hand = TABELAS DE GRÃO  [à mão]
+setup.open_tables_folder = Abrir pasta tables
+setup.make_grain_tables = Criar tabelas de grão
+setup.every_iso_step_from_100_to = Cada passo de ISO de 100 a 6400 para os tamanhos comuns 1080p, 720p e 4K [SDR, e HDR10/HLG para 4K]. Qualquer outro tamanho é criado automaticamente quando uma codificação precisa.
+setup.set_up_everything = Instalar tudo
+setup.check_for_updates = Procurar atualizações
+setup.roll_back_ffmpeg = Reverter ffmpeg
+setup.roll_back_svt_av1 = Reverter SVT-AV1
+setup.close = Fechar
+setup.stop_waiting = Parar de esperar
+setup.log = LOG
+
+# ---- Editor do plano de grão ----
+plan.grain_plan = Plano de grão
+plan.grain_plan_2 = PLANO DE GRÃO
+plan.timeline_bar_height_and_colour_denoise = LINHA DO TEMPO  [altura e cor da barra = nível de denoise; clique numa cena, Shift+clique para um intervalo, arraste para selecionar várias]
+plan.text = #
+plan.start = INÍCIO
+plan.end = FIM
+plan.length = DURAÇÃO
+plan.level = NÍVEL
+plan.iso = ISO
+plan.frame_from_the_middle_of_the = QUADRO DO MEIO DA CENA
+plan.select_a_scene = Selecione uma cena
+plan.set_the_selected_scenes_to = DEFINIR AS CENAS SELECIONADAS PARA
+plan.level_2 = Nível
+plan.apply = Aplicar
+plan.iso_follows_the_level_1_100 = O ISO segue o nível [1 = 100, 2 = 200, 3 = 400, 4 = 800, 5 = 1600]
+plan.keys_in_the_list_1_5 = Teclas na lista: 1-5 definem o nível, Ctrl+A seleciona tudo. O nível 1 é o denoise mais leve, o 5 o mais forte. O passo de ISO escolhe a tabela de grão recolocada por cima.
+plan.all_one_level_stronger = Todas um nível mais forte
+plan.all_one_level_lighter = Todas um nível mais leve
+plan.back_to_the_analysed_plan = Voltar ao plano analisado
+plan.save_plan = Salvar plano
+
+# ---- Histórico ----
+history.history = HISTÓRICO
+history.date = DATA
+history.av1 = AV1
+history.saved = ECONOMIZADO
+history.time = TEMPO
+history.play = Reproduzir
+
+# ---- Mensagens e perguntas ----
+message.update_after_the_encode_has_finished = Atualize depois que a codificação terminar.
+message.that_name_has_no_usable_characters = Esse nome não tem caracteres utilizáveis.
+message.add_at_least_one_film_first = Adicione pelo menos um filme primeiro.
+message.master_encode_bat_must_sit_next = master_encode.bat precisa ficar ao lado de av1_helper.ps1.
+message.this_file_has_no_grain_plan = Este arquivo ainda não tem plano de grão. Aperte Analisar plano primeiro [ou codifique-o uma vez no modo adaptativo].
+message.plan_csv_has_no_scenes = plan.csv não tem cenas.
+message.default_output_folder_a_full_path = Pasta de saída padrão: um caminho completo como D:\AV1 ou \\NAS\Filmes, ou vazio para ao lado da origem.
+message.default_file_name_it_cannot_be = Nome de arquivo padrão: não pode ficar vazio nem conter \ / : * ? " < > | % ! ^ &
+message.the_new_language_applies_the_next = O novo idioma vale na próxima vez que a janela abrir.
+message.output_folder_a_full_path_like = Pasta de saída: um caminho completo como D:\AV1 ou \\NAS\Filmes.
+message.output_folder_these_characters_cannot_be = Pasta de saída: estes caracteres não podem ser usados: * ? " < > | % !
+message.diagnostics_copied_paste_them_into_a = Diagnóstico copiado. Cole numa issue do GitHub ou numa mensagem. Ele contém suas configurações e caminhos de pastas, então revise antes.
+message.select_one_or_more_films_first = Selecione um ou mais filmes primeiro [anime não tem plano de grão].
+message.welcome_the_encoder_can_download_and = Bem-vindo. O codificador pode baixar e preparar tudo o que precisa [ffmpeg, VapourSynth e SVT-AV1 compilado neste PC] nas próprias pastas. Aperte "Instalar tudo" na próxima janela. Suas tabelas de grão vão na pasta tables.
+message.svtav1encapp_exe_was_not_found_use = SvtAv1EncApp.exe não foi encontrado. Use Instalação e atualizações para compilá-lo ou defina o caminho dele em Configurações.
+message.the_encode_keeps_running_in_its = A codificação continua na janela de console dela. Feche essa janela para pará-la.
+message.save_as_profile = Salvar como perfil
+message.name_for_the_new_profile_it = Nome do novo perfil. Ele é salvo na pasta profiles e aparece na lista de perfis.
+message.welcome_to_razav1 = Bem-vindo ao RazAV1
+message.save_the_changes_to_the_grain = Salvar as mudanças no plano de grão?
+message.the_new_language_applies_when_the = O novo idioma vale quando a janela abrir de novo. Reiniciar a janela agora? A fila volta como está.
+message.the_encoder_runs_inside_this_window = O codificador roda dentro desta janela. Fechá-la para a codificação. Abortar e fechar?
+
+# ---- Botões das mensagens ----
+button.ok = OK
+button.tuned_raz_triangle = Ajustado [RAZ Triangle]
+button.plain_av1_svt_av1_stock = AV1 simples [SVT-AV1 stock]
+button.yes = Sim
+button.no = Não
+button.restart_now = Reiniciar agora
+button.later = Mais tarde
