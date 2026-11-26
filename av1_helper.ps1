@@ -4352,13 +4352,13 @@ $GuiXaml = @'
         <DockPanel>
           <WrapPanel DockPanel.Dock="Top" Margin="0,0,0,2">
             <WrapPanel x:Name="spQueueTools">
-              <Button x:Name="btnAddFiles" Content="Add files" Margin="0,0,6,8"/>
-              <Button x:Name="btnAddFolder" Content="Add folder" Margin="0,0,6,8"/>
-              <Button x:Name="btnRemove" Content="Remove" Margin="0,0,6,8"/>
-              <Button x:Name="btnClear" Content="Clear" Margin="0,0,6,8"/>
-              <Button x:Name="btnSelectAll" Content="Select all" Margin="0,0,6,8"/>
-              <Button x:Name="btnUp" Content="Up" Padding="10,7" Margin="0,0,6,8" ToolTip="Move the selected files earlier in the queue"/>
-              <Button x:Name="btnDown" Content="Down" Padding="10,7" Margin="0,0,16,8" ToolTip="Move the selected files later in the queue"/>
+              <Button x:Name="btnAddFiles" Content="Add files" Margin="0,0,6,8" ToolTip="Add video files  [Ctrl+O]"/>
+              <Button x:Name="btnAddFolder" Content="Add folder" Margin="0,0,6,8" ToolTip="Add every video in a folder  [Ctrl+Shift+O]"/>
+              <Button x:Name="btnRemove" Content="Remove" Margin="0,0,6,8" ToolTip="Remove the selected files from the queue  [Delete]"/>
+              <Button x:Name="btnClear" Content="Clear" Margin="0,0,6,8" ToolTip="Empty the queue"/>
+              <Button x:Name="btnSelectAll" Content="Select all" Margin="0,0,6,8" ToolTip="Select every file  [Ctrl+A]"/>
+              <Button x:Name="btnUp" Content="Up" Padding="10,7" Margin="0,0,6,8" ToolTip="Move the selected files earlier in the queue  [Alt+Up]"/>
+              <Button x:Name="btnDown" Content="Down" Padding="10,7" Margin="0,0,16,8" ToolTip="Move the selected files later in the queue  [Alt+Down]"/>
             </WrapPanel>
             <WrapPanel x:Name="spPlanTools">
               <Button x:Name="btnAnalyse" Content="Analyse plan" Margin="0,0,6,8" ToolTip="Runs only the crop scan and the adaptive grain analysis for the selected files, so you can edit the plan before encoding."/>
@@ -7612,6 +7612,32 @@ function Start-Gui {
         })
     $G.btnClear.Add_Click({ $G.Queue.Clear(); Update-Empty })
     $G.btnSelectAll.Add_Click({ $G.lvQueue.SelectAll() })
+
+    # Keyboard: each shortcut does what its button does, and only when that button is usable right now
+    $G.Win.Add_PreviewKeyDown({
+            param($s, $e)
+            $K = [System.Windows.Input.Key]
+            $mods = [System.Windows.Input.Keyboard]::Modifiers
+            $ctrl = (($mods -band [System.Windows.Input.ModifierKeys]::Control) -ne 0)
+            $shift = (($mods -band [System.Windows.Input.ModifierKeys]::Shift) -ne 0)
+            $key = $e.Key
+            if ($key -eq $K::System) { $key = $e.SystemKey }    # Alt+key arrives as Key.System
+            $alt = (($mods -band [System.Windows.Input.ModifierKeys]::Alt) -ne 0)
+            $click = {
+                param($b)
+                if ($null -ne $b -and $b.IsEnabled -and $b.IsVisible) { $b.RaiseEvent((New-Object System.Windows.RoutedEventArgs([System.Windows.Controls.Primitives.ButtonBase]::ClickEvent))) }
+            }
+            $inQueue = $G.lvQueue.IsKeyboardFocusWithin
+            if ($key -eq $K::Delete -and $inQueue -and -not $ctrl -and -not $alt) { & $click $G.btnRemove; $e.Handled = $true; return }
+            if ($alt -and $inQueue -and $key -eq $K::Up) { & $click $G.btnUp; $e.Handled = $true; return }
+            if ($alt -and $inQueue -and $key -eq $K::Down) { & $click $G.btnDown; $e.Handled = $true; return }
+            if ($ctrl -and $key -eq $K::O) {
+                if ($shift) { & $click $G.btnAddFolder } else { & $click $G.btnAddFiles }
+                $e.Handled = $true; return
+            }
+            if ($ctrl -and ($key -eq $K::D1 -or $key -eq $K::NumPad1)) { Show-Page 'files'; $e.Handled = $true; return }
+            if ($ctrl -and ($key -eq $K::D2 -or $key -eq $K::NumPad2)) { Show-Page 'encoding'; $e.Handled = $true; return }
+        })
     $G.lvQueue.Add_SelectionChanged({ Show-Details })
 
     $G.cbProfile.Add_SelectionChanged({

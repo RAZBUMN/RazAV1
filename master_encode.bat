@@ -716,7 +716,10 @@ if /i "%SI_KIND%"=="HLG" set "HDR_TRC=18"
 if /i "%SI_KIND%"=="HLG" set "TAG_SRC=4K_HLG"
 if /i "%SI_KIND%"=="HLG" set "TABLE_HDR=2"
 set "COLOR_OPTS=--color-primaries 9 --transfer-characteristics %HDR_TRC% --matrix-coefficients 9 --color-range studio"
-set "HDR_OPTS=--enable-hdr 1"
+REM --enable-hdr is only passed when this encoder build lists it in --help [newer builds may have dropped it;
+REM the mastering display and light levels below write the HDR metadata either way]
+set "HDR_OPTS="
+"%SVT_EXE%" --help 2>&1 | findstr /c:"--enable-hdr" >nul && set "HDR_OPTS=--enable-hdr 1"
 if not "!SI_MDCV!"=="-" set HDR_OPTS=!HDR_OPTS! --mastering-display "!SI_MDCV!"
 if not "!SI_CLL!"=="-" set HDR_OPTS=!HDR_OPTS! --content-light !SI_CLL!
 :pf_color_done
@@ -1036,6 +1039,7 @@ for /f %%A in ('type "%PTS_FILE%" ^| find /c /v ""') do set "TOTAL_PROBES=%%A"
 
 set /a SAMPLE_COUNT=0
 set /a PROBE_FAIL=0
+set "PROBE_ERR=none"
 set /a PROBE_CS=0
 set /a PROBE_VOK=0
 for /f "usebackq tokens=1,2" %%T in ("%PTS_FILE%") do (
@@ -1085,7 +1089,7 @@ echo --------------------------------------------------------------------
 if defined Q_TEXT >>"%LOG%" echo(Quality:  !Q_TEXT!
 
 if %PROBE_FAIL% GEQ %SAMPLE_COUNT% (
-    set "FAIL_REASON=Every probe failed. The filter chain or SVT settings are broken. Filter: !VFILTER!"
+    set "FAIL_REASON=Every probe failed, so the full encode was not started. Encoder message: !PROBE_ERR!"
     goto :pf_fail
 )
 
@@ -1741,15 +1745,19 @@ echo    - Probe %PN% of %TOTAL_PROBES% at [%TS%]%PINFO%
 call :now_cs
 set /a "PT_A=NOW_CS"
 if "%USE_VS%"=="1" goto :probe_vs
-ffmpeg -nostdin -threads 0 -v error -ss %PT% -i "%INPUT%" -t 15 -map 0:v:0 -vf "%PVF%" -r %FPS% -pix_fmt yuv420p10le -strict -1 -f yuv4mpegpipe - 2>nul | "%SVT_EXE%" -i stdin --progress 0 %POPTS% -b "%PROBE_DIR%\p_%PN%.ivf" >nul 2>&1
+ffmpeg -nostdin -threads 0 -v error -ss %PT% -i "%INPUT%" -t 15 -map 0:v:0 -vf "%PVF%" -r %FPS% -pix_fmt yuv420p10le -strict -1 -f yuv4mpegpipe - 2>nul | "%SVT_EXE%" -i stdin --progress 0 %POPTS% -b "%PROBE_DIR%\p_%PN%.ivf" >nul 2>"%PROBE_DIR%\svt_%PN%.txt"
 goto :probe_video_done
 :probe_vs
-"%VS_EXE%" -c y4m -s %PF0% -e %PF1% -a start=%PF0% -a end=%PF1% "%VPY%" - 2>nul | "%SVT_EXE%" -i stdin --progress 0 %POPTS% -b "%PROBE_DIR%\p_%PN%.ivf" >nul 2>&1
+"%VS_EXE%" -c y4m -s %PF0% -e %PF1% -a start=%PF0% -a end=%PF1% "%VPY%" - 2>nul | "%SVT_EXE%" -i stdin --progress 0 %POPTS% -b "%PROBE_DIR%\p_%PN%.ivf" >nul 2>"%PROBE_DIR%\svt_%PN%.txt"
 :probe_video_done
 call :now_cs
 set /a "PT_D=NOW_CS-PT_A"
 if %PT_D% LSS 0 set /a "PT_D+=8640000"
-if exist "%PROBE_DIR%\p_%PN%.ivf" for %%Z in ("%PROBE_DIR%\p_%PN%.ivf") do if %%~zZ GTR 0 set /a "PROBE_CS+=PT_D, PROBE_VOK+=1"
+REM An .ivf with only its 32-byte header means the encoder stopped before the first frame
+set "PV_OK=0"
+if exist "%PROBE_DIR%\p_%PN%.ivf" for %%Z in ("%PROBE_DIR%\p_%PN%.ivf") do if %%~zZ GTR 1024 set "PV_OK=1"
+if "%PV_OK%"=="0" goto :probe_no_video
+set /a "PROBE_CS+=PT_D, PROBE_VOK+=1"
 
 if /i "%PF_audio_format%"=="copy" ffmpeg -y -nostdin -v error -ss %PT% -i "%INPUT%" -t 15 -map 0:a:%AUD_IDX% -c:a copy "%PROBE_DIR%\a_%PN%.mka" >nul 2>&1
 if /i not "%PF_audio_format%"=="copy" ffmpeg -y -nostdin -v error -ss %PT% -i "%INPUT%" -t 15 -map 0:a:%AUD_IDX% -c:a libopus -b:a %AUDIO_BR% -vbr on -frame_duration:a 10 -af "%AUDIO_FILTER%" "%PROBE_DIR%\a_%PN%.mka" >nul 2>&1
@@ -1758,6 +1766,17 @@ ffmpeg -y -nostdin -v error -r %FPS% -i "%PROBE_DIR%\p_%PN%.ivf" -i "%PROBE_DIR%
 
 if exist "%PROBE_DIR%\chunk_%PN%.mkv" >>"%CONCAT_LIST%" echo file '%PROBE_DIR%\chunk_%PN%.mkv'
 if not exist "%PROBE_DIR%\chunk_%PN%.mkv" set /a PROBE_FAIL+=1
+exit /b 0
+
+:probe_no_video
+set /a PROBE_FAIL+=1
+set "SVT_ERR="
+if exist "%PROBE_DIR%\svt_%PN%.txt" for /f "usebackq delims=" %%L in (`findstr /i /c:"error" "%PROBE_DIR%\svt_%PN%.txt"`) do if not defined SVT_ERR set "SVT_ERR=%%L"
+if not defined SVT_ERR if exist "%PROBE_DIR%\svt_%PN%.txt" for /f "usebackq delims=" %%L in ("%PROBE_DIR%\svt_%PN%.txt") do set "SVT_ERR=%%L"
+if not defined SVT_ERR set "SVT_ERR=the encoder stopped without a message"
+set "PROBE_ERR=!SVT_ERR!"
+echo      [FAIL] no video came out of the encoder: !SVT_ERR!
+if defined LOG >>"%LOG%" echo(Probe %PN% failed: !SVT_ERR!
 exit /b 0
 
 :probe_adapt
