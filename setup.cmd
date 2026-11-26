@@ -352,7 +352,7 @@ for %%c in ("%AV1_CMAKE%") do set "PATH=%%~dpc;%PATH%"
 call :log "Compiling %SVT_NAME% %AV1_SVT_TAG% with %AV1_GEN%%AV1_TOOLSET% - a few minutes. Full output: %BLOG%"
 >"%BLOG%" echo %SVT_NAME% %AV1_SVT_TAG% build - %DATE% %TIME%
 echo    1/3  Configuring...
-cmake -S "%SRC%" -B "%SRC%\av1me_build" -G "%AV1_GEN%" -A x64%AV1_TOOLSET% "-DCMAKE_GENERATOR_INSTANCE=%AV1_VSPATH%" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTING=OFF -DBUILD_APPS=ON -DBUILD_TOOLS=ON "-DCMAKE_ASM_NASM_COMPILER=%AV1_NASM_FWD%" >>"%BLOG%" 2>&1
+cmake -S "%SRC%" -B "%SRC%\av1me_build" -G "%AV1_GEN%" -A x64%AV1_TOOLSET% "-DCMAKE_GENERATOR_INSTANCE=%AV1_VSPATH%" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTING=OFF -DBUILD_APPS=ON -DBUILD_TOOLS=ON %AV1_CMAKE_EXTRA% "-DCMAKE_ASM_NASM_COMPILER=%AV1_NASM_FWD%" >>"%BLOG%" 2>&1
 if errorlevel 1 (
     if defined AV1_SVT_BINURL goto :svt_prebuilt
     set "FAILMSG=Configuring the %SVT_NAME% build failed. The build log opens in Notepad."
